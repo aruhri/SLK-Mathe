@@ -2,5 +2,6 @@
 \contentsline {section}{\numberline {1}Scharen von Funktionen}{Seite~2}
 \contentsline {subsection}{\numberline {1.1}Das Schachtelproblem}{Seite~2}
 \contentsline {subsection}{\numberline {1.2}Weitere Aufgaben}{Seite~3}
-\contentsline {section}{\numberline {2}Ortskurven}{Seite~6}
-\contentsline {section}{\numberline {3}Fixpunkte}{Seite~7}
+\contentsline {section}{\numberline {2}Ortskurven}{Seite~4}
+\contentsline {section}{\numberline {3}Fixpunkte}{Seite~5}
+\contentsline {section}{\numberline {4}L\IeC {\"o}sungen der Aufgaben}{Seite~5}

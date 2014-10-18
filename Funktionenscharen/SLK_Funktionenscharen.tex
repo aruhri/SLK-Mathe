@@ -84,7 +84,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   Wahl von $x$ hat die Schachtel ein anderes Volumen.
 \end{minipage}\hfill
 \begin{minipage}[t]{.2\linewidth}
-  \vspace{-3\baselineskip}\includegraphics[width=\linewidth]{1_schachtel_1}
+  \vspace{-3\baselineskip}\includegraphics[width=\linewidth]{pics/1_schachtel_1}
 \end{minipage}
 
 \begin{question}%[type=exam]
@@ -116,6 +116,10 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
     natürlich: $a > 0 $ und $a \in\mathbb{R}$ oder kurz:
     $a\in\mathbb{R}^+$, weil es eine Seitenlänge ist und somit nur
     positive Werte annehmen kann.
+  \item Zeichnen Sie die Graphen von $V$ für die Seitenlängen
+    $a=75\,$cm, $a=60\,$cm und $a=45\,$cm in \emph{ein}
+    passendes\footnote{Tipp: $0 \leq x \leq 40$ und $0 \leq y \leq 32000$}
+    Koordinatensystem. 
   \item Bestimmen Sie nun das Maximum\footnote{Zur Erinnerung: Das
       Maximum ist ein Punkt. Zur Erinnerung: Ein Punkt hat immer zwei
       Koordinaten.} der Volumensfunktion für jede 
@@ -141,29 +145,34 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
    die halbe Seitenlänge der Pappe sein. (Begründen Sie!)
   \item 
     \begin{enumerate}
-      \item $V^\prime(x)=12x^2-240x +900$ und
+   
+        \item $V^\prime(x)=12x^2-240x +900$ und
         $V^{\prime\prime}(x)=24x -240$
 
         $V^\prime(x)=0 \Leftrightarrow x=15 \vee x=5$ Für $x=15$ ist
         das Volumen null (warum?), $V^{\prime\prime}(5)=-120 < 0$, also
         erhält man das maximale Volumen der Schachtel, wenn man ein
         Quadrat der Seitenlänge $x_{max}=5$ ausschneidet.
-      \end{enumerate}
-      \begin{multicols}{2}
-        \begin{enumerate}[resume]
+        \begin{multicols}{2}
         \item $x_{max}=12$
         \item $x_{max}=15$
-        \end{enumerate}
+  
       \end{multicols}
-    \item Vergleichen Sie mit Ihren Klassenkollegen!
-    \item Das Volumen jeder Schachtel kann dann einfach durch 
-    $V_a(x)=x\cdot (a - 2x)^2$ ausgedrückt werden. 
-    Durch Anwenden der binomischen Formel erhalten wir 
-    $ V_a(x)=x\cdot(a^2 - 4ax + 4x^2)$
-    und weiter:
-    $ V_a(x)=4x^3 - 4ax^2+ a^2x$, wobei natürlich wegen des
-    Sachzusammenhangs gilt: $0 < x < \frac a 2$ und $a\in\mathbb{R}^+$.
-  \item Wir leiten  $ V_a(x)$ nach $x$ ab 
+        \end{enumerate}
+  
+      \item Vergleichen Sie mit Ihren Klassenkollegen!
+      \item Das Volumen jeder Schachtel kann dann einfach durch
+        $V_a(x)=x\cdot (a - 2x)^2$ ausgedrückt werden.  Durch Anwenden
+        der binomischen Formel erhalten wir $ V_a(x)=x\cdot(a^2 - 4ax
+        + 4x^2)$ und weiter: $ V_a(x)=4x^3 - 4ax^2+ a^2x$, wobei
+        natürlich wegen des Sachzusammenhangs gilt: $0 < x < \frac a
+        2$ und $a\in\mathbb{R}^+$.
+      \item 
+        Für ein fest gewähltes $a$ wird jeweils ein Grpah gezeichnet.
+
+        \includegraphics[width=0.8\linewidth]{pics/graph_1}
+        
+    \item Wir leiten  $ V_a(x)$ nach $x$ ab 
     $ V_a^\prime(x)=12x^2 - 8ax + a^2$ und bestimmen die Nullstellen
     (in Abhängigkeit von $a$): 
     $$12x^2 - 8ax + a^2=0
@@ -188,6 +197,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
     $$V_a(\frac a 6)=4(\frac a 6)^3 - 4 a (\frac a 6)^2 + a^2\cdot
     \frac a 6=\frac 2 {27} a^3$$
     Also hat der Hochpunkt die Koordinaten: $H(\frac a 6|\frac 2 {27}a^3)$.
+ 
   \item Vergleichen Sie mit Ihren Klassenkolleginnen! 
   \end{enumerate}
 \end{solution}
@@ -204,10 +214,11 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
     einen Winkel von $45^\circ$ nach oben einnimmt. Nun hängt es von der
     Geschwindigkeit des Balls ab, welche Bahn er beschreibt.
 
-    Ist $v$ die Geschwindigkeit zum Zeitlunkt des Abschusses, dann
+    Ist $v$ (in m/s) die Geschwindigkeit zum Zeitpunkt des Abschusses, dann
     kann die Flugbahn unter Vernachlässigung des Luftwiderstandes
     durch folgende Funktion beschrieben werden: 
     $$f_v(x)=-\frac 1 {v^2} \cdot 9,81\cdot x^2 + x$$
+    Wobei die Koordinaten in der Maßeinheit m gemessen werden.
     Der Faktor 9,81 ist durch die jeweils wirkende
     Fallbeschleunigung zu ersetzen (Mond: 1,62). 
 
@@ -215,13 +226,13 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   \item Zeichnen Sie die Wurfparabeln für die Geschwindigkeiten
     \begin{multicols}{3}
       \begin{enumerate}
-      \item $5\,$m/s
-      \item $10\,$m/s
+      \item $6\,$m/s
+      \item $9\,$m/s
       \item $12\,$m/s
       \end{enumerate}
     \end{multicols}
     in ein Koordinatensystem, dessen $x$-Achse von 0 bis 15 und dessen
-    $y$-Achse von 0 bis 5 reicht. Abschusspunkt ist jeweils $(0|0)$. 
+    $y$-Achse von 0 bis 4 reicht. Abschusspunkt ist jeweils $(0|0)$. 
   \item Bestimmen Sie jeweils rechnerisch  die Schussweite.
   \item Ermitteln Sie jeweils den höchsten Punkt der Flugbahn.
   \item \label{ball:v:30m}Bestimmen Sie die nötige Abschussgeschwindigkeit, um den Ball
@@ -239,27 +250,29 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
 \end{question}
 \begin{solution}
   \begin{enumerate}
-  \item 
+  \item Flugbahnen für unterschiedliche Geschwindigkeiten.
+
+    \includegraphics[width=.8\linewidth]{pics/graph_2}
   \item
     \begin{multicols}{3}
       \begin{enumerate}
-      \item $2,5484\,$m
-      \item $10,1936\,$m
+      \item $3,669\,$m
+      \item $8,257\,$m
       \item $14,679\,$m
       \end{enumerate}
     \end{multicols}
   \item
     \begin{multicols}{3}
       \begin{enumerate}
-      \item $H(1,2742|0,6371)$
-      \item $H(5,0968|2,5484)$
-      \item $H(7,3394|3,6697)$
+      \item $H(1,835|0,917)$
+      \item $H(4,128|2,064)$
+      \item $H(7,339|3,67)$
       \end{enumerate}
     \end{multicols}
   \item Auf $f$ bezogen heißt die Forderung: $f$ hat bei $x=30$ eine
     Nullstelle. Man sucht das passende $v$. Also muss
     $-\frac 1 {v^2} \cdot 9,81\cdot 30^2 + 30=0$ nach $v$
-    umgestellt werden.Man erhält:
+    umgestellt werden. Man erhält:
     $v_{1,2}=\pm\sqrt{9,81\cdot 30}\approx \pm 17,1552\,$[m/s]. Da wir
     nur nach vorne schießen, entfällt die negative Lösung.
   \item Auf dem Mond gilt für die Flugbahn die Funktionsgleichung 
@@ -309,7 +322,44 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
      $v=16,5735\,$m/s die gesuchte Lösung.
   \end{enumerate}
 \end{solution}
+
 \begin{question}
+
+  Frischen Sie Ihr Wissen über Parabeln und ihre Gleichungen aus der
+  11. Klasse auf. Erläutern Sie die Bedeutung der Koeffizienten in den
+  verschiedenen Arten der Parabelgleichungen:
+  $$f(x)=ax^2+bx+c;\quad f(x)=a(x-x_S)^2 + y_S;\quad
+  f(x)=a(x-d)\cdot(x-e)$$
+  Überlegen Sie in den folgenden Aufgaben, welche Merkmale der Parabel
+  sich ändern, wenn man den Parameter $t\in\mathbb{R}^+$ verändert und
+  welche sich 
+  nicht verändern. Formen Sie gegebenfalls den Funktionsterm in eine
+  Form um.
+  \begin{enumerate}
+    \begin{multicols}{2}
+    \item $f_t(x)=-\frac 1 2 tx^2+9$
+    \item $f_t(x)=(x-t)^2-t^2$
+    \item $f_t(x)=\frac 1 3 (x-2)(x+t)$
+    \item $f_t(x)=\frac 1 8 t x^2+tx+3$
+    \end{multicols}
+\end{enumerate}
+\end{question}
+\begin{solution}
+   \begin{enumerate}
+      \item Die Streckung der Parabel verändert sich entgegen $t$, der
+      Scheitelpunkt und der $y$-Achsenschnitt bleiben konstant.
+    \item Streckung bleibt konstant, der Scheitelpunkt ändert sich
+      (aber wie?).
+    \item Streckung ist konstant, eine Nullstelle verschiebt sich,
+      damit auch der Scheitelpunkt.
+    \item Der Scheitelpunkt wandert senkrecht  und die Streckung
+      ändert sich, der $y$-Achsenabschnitt ist konstant.
+  \end{enumerate}
+\end{solution}
+
+
+
+\begin{question}\label{scharen:tangente}
   
   Gegeben ist eine Funktionenschar $f_a$ mit $a\in\mathbb{R}^+$.
   Berechnen Sie die Steigung der Tangente an den Graphen von $f_a$ an
@@ -341,7 +391,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
 
 \begin{question}
   
-Bearbeiten Sie die Aufgaben aus Aufgabe 3 und betrachten
+Bearbeiten Sie die Aufgaben aus Aufgabe \ref{scharen:tangente} und betrachten
 Sie nicht die Stelle $x=0$, sondern nun die Stelle $x=1$ (oder etwas
 schwieriger $x=2$).
 
@@ -397,16 +447,12 @@ Welche Aufgabe ist für Sie nur mit Taschenrechner lösbar?
   \end{multicols}
 \end{solution}
   
-{\scriptsize\printsolutions[section]}
- 
-
-  
 \section{Ortskurven}
 Verändert man den Parameter einer Funktionenschar, so verändern sich
 die Funktionen und mit ihnen die Graphen in der Regel\footnote{Stimmt
   natürlich so nicht, aber bei den Scharen und Funktionen, die wir
-  betrachten ist das in der Regel so.} stetig, das
-heißt ohne Sprünge. Betrachten Sie dazu z.B. einen Hochpunkt eines
+  betrachten ist das in der Regel so.}  \emph{stetig}, das
+heißt ohne Sprünge. Betrachten Sie dazu z. B. einen Hochpunkt eines
 Graphen (z. B. den Scheitelpunkt aus der Aufgabe mit den
 Wurfparabeln). Wenn Sie den Parameter ändern, wandert auch der
 Hochpunkt und beschreibt dabei eine bestimmte Kurve -- seine
@@ -443,14 +489,33 @@ Also liegen alle Hochpunkte auf dem Graphen der Funktion $f(x)=16x^3$.
 \end{solution}
 
 
-
-{\scriptsize\printsolutions[section]}
+\begin{question}
+  Bestimmen Sie die Extrempunkte und die Ortskurven der Extrema der
+  Funktionenscharen $f_t$.
+  \begin{multicols}{2}
+    \begin{enumerate}
+    \item $f_t(x)=x^2-2tx;\quad t\in\mathbb{R}$
+    \item $f_t(x)=x^2+tx-2x-2t;\quad t\in\mathbb{R}$
+    \item $f_t(x)=\frac 1 8 tx^2+x+2;\quad t\in\mathbb{R}^+$
+    \end{enumerate}
+  \end{multicols}
+\end{question}
+\begin{solution}
+  \begin{multicols}{2}
+    \begin{enumerate}
+    \item $H(t|-t^2);\;y=-x^2$
+    \item $T(1-\frac t 2|-\frac {t^2} 4 -t -1);\; y=-x^2+4x-4$
+    \item $T(-\frac 4 t|-\frac 2 t+2);\; y=\frac x 2 +2$ (Tipp: nach
+      $\frac 2 t$ umstellen, da man nicht durch $x$ teilen darf!)
+    \end{enumerate}
+  \end{multicols}
+\end{solution}
 
 \section{Fixpunkte}
 
  
-
-
+\section{Lösungen der Aufgaben}
+{\scriptsize\printsolutions}
 \end{document}
 
 
