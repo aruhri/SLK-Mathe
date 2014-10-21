@@ -10,5 +10,5 @@ Lehrerin mehr Zeit zur Individualbetreuung  bleibt.
 
 Die Kurse werden in LaTeX geschrieben.
 
-Selft-learning courses for several themes in mathematics in higher german schools.
+Self-learning courses for several themes in mathematics in higher german schools.
 
