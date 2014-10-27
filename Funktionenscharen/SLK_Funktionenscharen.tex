@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside,fleqn]{article}
+\documentclass[11pt,a4paper,twoside,fleqn]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
 \usepackage[left=25mm, top=20mm, bottom=20mm, right=20mm]{geometry}
@@ -64,7 +64,6 @@ und der Integralrechnung vertraut sein.
 
 \tableofcontents
 
-\newpage
 \section{Scharen von Funktionen}
 In vielen Sachzusammenhängen, die durch eine ganzrationale Funktion
 beschrieben werden, kann es sinnvoll sein sich verändernde Parameter
@@ -209,7 +208,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   einzelne $V_a$ ist Mitglied der Schar. Das gleiche gilt für die
   Ableitungsfunktionen $V^\prime_a$. Auch sie bilden zusammen eine
   Schar. 
-
+\newpage
   \subsection{Weitere Aufgaben}
   \begin{question}
     Wurfparabel
@@ -226,31 +225,31 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
     Der Faktor 9,81 ist durch die jeweils wirkende
     Fallbeschleunigung zu ersetzen (Mond: 1,62). 
 
-  \begin{enumerate}
+  \begin{enumerate}\itemsep0pt
   \item Zeichnen Sie die Wurfparabeln für die Geschwindigkeiten
-    \begin{multicols}{3}
-      \begin{enumerate}
+    \begin{enumerate}
+      \begin{multicols}{3}
       \item $6\,$m/s
       \item $9\,$m/s
       \item $12\,$m/s
-      \end{enumerate}
-    \end{multicols}
+      \end{multicols}
+    \end{enumerate}
     in ein Koordinatensystem, dessen $x$-Achse von 0 bis 15 und dessen
     $y$-Achse von 0 bis 4 reicht. Abschusspunkt ist jeweils $(0|0)$. 
-  \item Bestimmen Sie jeweils rechnerisch  die Schussweite.
-  \item Ermitteln Sie jeweils den höchsten Punkt der Flugbahn.
-  \item \label{ball:v:30m}Bestimmen Sie die nötige Abschussgeschwindigkeit, um den Ball
-    $30\,$m weit zu schießen.
-  \item Berechnen Sie die Schussweite, die man erreichen könnte, wenn
-    man den Ball mit der Abschussgeschwindigkeit aus \ref{ball:v:30m}.)
-    auf dem Mond schießen würde.
-  \item Bestimmen Sie die Schussweite und den Scheitelpunkt der
-    Flugbahn für alle $v\in\mathbb{R}^+$.
-  \item Wie können Sie das letzte Ergebniss mit den vorigen in
-    Einklang bringen?
-  \item Bestimmen Sie die nötige Abschussgeschwindigkeit, damit der
-    Ball $7\,$m hoch fliegt.
-  \end{enumerate}
+     \item Bestimmen Sie jeweils rechnerisch die Schussweite.
+    \item Ermitteln Sie jeweils den höchsten Punkt der Flugbahn.
+    \item \label{ball:v:30m}Bestimmen Sie die nötige
+      Abschussgeschwindigkeit, um den Ball $30\,$m weit zu schießen.
+    \item Berechnen Sie die Schussweite, die man erreichen könnte,
+      wenn man den Ball mit der Abschussgeschwindigkeit aus
+      \ref{ball:v:30m}.)  auf dem Mond schießen würde.
+    \item Bestimmen Sie die Schussweite und den Scheitelpunkt der
+      Flugbahn für alle $v\in\mathbb{R}^+$.
+    \item Wie können Sie das letzte Ergebniss mit den vorigen in
+      Einklang bringen?
+    \item Bestimmen Sie die nötige Abschussgeschwindigkeit, damit der
+      Ball $7\,$m hoch fliegt.
+   \end{enumerate}
 \end{question}
 \begin{solution}
   \begin{enumerate}
@@ -267,7 +266,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
     \end{multicols}
   \item
     \begin{multicols}{3}
-      \begin{enumerate}
+      \begin{enumerate} 
       \item $H(1,835|0,917)$
       \item $H(4,128|2,064)$
       \item $H(7,339|3,67)$
@@ -339,7 +338,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   welche sich 
   nicht verändern. Formen Sie gegebenfalls den Funktionsterm in eine
   Form um.
-  \begin{enumerate}
+  \begin{enumerate}\itemsep0pt
     \begin{multicols}{2}
     \item $f_t(x)=-\frac 1 2 tx^2+9$
     \item $f_t(x)=(x-t)^2-t^2$
@@ -370,7 +369,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   der Stelle $x=0$. Bestimmen Sie $a$ so, dass diese Steigung den Wert
   $1$ annimmt.  
   \begin{multicols}{2}
-    \begin{enumerate}
+    \begin{enumerate}\itemsep0pt
     \item $f_a(x)=ax^2+ax$
     \item $f_a(x)=ax^3+x^2-2ax$
     \item $f_a(x)=a^3x^3- ax$
@@ -413,7 +412,7 @@ Welche Aufgabe ist für Sie nur mit Taschenrechner lösbar?
   $f_t$ mit der $x$-Achse einschließt. Bestimmen Sie $t$ so, dass die
   Fläche 8 Flächeneinheiten groß ist.
   \begin{multicols}{3}
-      \begin{enumerate}
+      \begin{enumerate}\itemsep0pt
       \item $f_t(x)=x^2-t^2$
       \item $f_t(x)=x^2-2tx$
       \item $f_t(x)=-x^2 + \frac 1 2 t^2x$
@@ -461,7 +460,7 @@ Graphen (z. B. den Scheitelpunkt aus der Aufgabe mit den
 Wurfparabeln). Wenn Sie den Parameter ändern, wandert auch der
 Hochpunkt und beschreibt dabei eine bestimmte Kurve -- seine
 Ortskurve.
-
+\subsection{Bestimmung von Ortskurven}
 Betrachten Sie den Hochpunkt des Volumens aus dem Schachtelproblem:
 $$H\left(\frac a 6\mid\frac 2 {27}a^3\right)$$ %%%Mittelstrich anpassen
 Sie sehen, die Koordinaten sind vom Parameter $a$ -- der Seitenlänge
@@ -498,7 +497,7 @@ Also liegen alle Hochpunkte auf dem Graphen der Funktion $f(x)=16x^3$.
   Bestimmen Sie die Extrempunkte und die Ortskurven der Extrema der
   Funktionenscharen $f_t$.
   \begin{multicols}{2}
-    \begin{enumerate}
+    \begin{enumerate}\itemsep0pt
     \item $f_t(x)=x^2-2tx;\quad t\in\mathbb{R}$
     \item $f_t(x)=x^2+tx-2x-2t;\quad t\in\mathbb{R}$
     \item $f_t(x)=\frac 1 8 tx^2+x+2;\quad t\in\mathbb{R}^+$
@@ -522,8 +521,119 @@ Also liegen alle Hochpunkte auf dem Graphen der Funktion $f(x)=16x^3$.
 \end{solution}
 
 \section{Fixpunkte}
-\includegraphics[width=0.7\linewidth]{pics/graph_3}
- 
+\begin{minipage}[b]{0.39\linewidth}
+  In der Abbildung sind die Graphen einiger Funktionen der Schar
+$$f_a(x)=\frac 1 5 x^3 -\frac 1 2 ax^2 +x+5a;\quad a\in\mathbb{R}^+$$
+dargestellt.
+
+Es ist leicht zu sehen, dass alle Mitglieder dieser Schar zwei
+gemeinsame Punkte haben. Nicht alle Scharen haben gemeinsame Punkte,
+sogenannte Fixpunkte. 
+
+\vspace{1cm}
+
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.6\linewidth}
+  \includegraphics[width=1\linewidth]{pics/graph_3}
+\end{minipage}
+\subsection{Bestimmung von Fixpunkten}
+Um die Fixpunkte einer Schar zu bestimmen, muss man folgende Gleichung
+lösen:
+$$f_a(x)=f_b(x)\quad \textrm{mit } a\neq b$$
+Versuchen Sie die Fixpunkte der obigen Schar zu bestimmen, ehe Sie
+weiter lesen.
+
+Dem obigen Ansatz folgend erhält man die Gleichung: 
+$$\frac 1 5 x^3 -\frac 1 2 ax^2 +x+5a 
+=
+\frac 1 5 x^3 -\frac 1 2 bx^2+x+5b$$
+Wir ziehen $\frac 1 5 x^3$ und $x$ auf beiden Seiten ab und erhalten:
+$$-\frac 1 2 ax^2+5a = -\frac 1 2 bx^2+5b$$
+Wir stellen alle Terme mit $x$ nach links, die konstanten nach rechts:
+$$\frac 1 2 bx^2-\frac 1 2 ax^2 = 5b-5a$$
+Dann klammern wir $b-a$ aus (das ist quasi der Hauptschritt):
+$\frac 1 2 x^2 (b-a) = 5(b-a)$.
+Da $b\neq a$, ist $b-a\neq 0$ und wir dürfen durch $b-a$ teilen:
+$\frac 1 2 x^2= 5$.
+Wir lösen die quadratische Gleichung und erhalten als Lösungen:
+$x_1=\sqrt{10};\; x_2=-\sqrt{10}$. Es bleibt nur noch, die Werte in
+$f_a$ einzusetzen (dabei wählen wir ein möglichst bequemes $a$) um die
+$y$-Werte der Fixpunkte zu bekommen und erhalten:
+$F_1(-\sqrt{10}|-3\sqrt{10})$ und $F_2(\sqrt{10}|3\sqrt{10})$.
+\begin{question}
+
+  Bestimmen Sie die gemeinsamen Punkte der folgenden Scharen.
+  \begin{enumerate}
+    \begin{multicols}{2}
+    \item $f_a(x)=ax^2+2ax-3a;\;a\in\mathbb{R}$
+    \item $f_a(x)=ax^2-4ax+4a+4;\;a\in\mathbb{R}$
+    \item $f_a(x)=x^3-ax^2-4x+4a;\;a\in\mathbb{R}$
+    \item $f_a(x) = x^3 + a x^2 - a x + 4;\;a\in\mathbb{R}$
+    \end{multicols}
+  \item $f_a(x)=x^3-4x^2-ax^2+4ax-21x+21a+8;\;a\in\mathbb{R}$
+  \end{enumerate}
+\end{question}
+\begin{solution}
+   \begin{enumerate}
+    \begin{multicols}{3}
+    \item $F_1(1|0);\;F_2(-3|0)$
+    \item $F(2|4)$
+    \item $F_1(2|0);\;F_2(-2|0)$
+    \item $F_1(0|4);\;F_2(1|5)$
+    \item $F_1(-3|8);\;F_2(7|8)$
+    \end{multicols}
+  \end{enumerate}
+\end{solution}
+\section{Übungsaufgaben}
+\begin{question}
+  Springbrunnen
+
+An der Längsseite eines 20\,m langen und 3\,m breiten Wasserbeckens
+sind die Düsen so angebracht, dass die Wasserfontänen im rechten Winkel
+zum Rand aufsteigen, eine Parabel beschreiben und dann im Becken auf
+das Wasser auftreffen. Dabei kann die Parabel in Abhängigkeit vom
+Wasserdruck durch folgende Gleichung modelliert werden:
+$$f_t(x)=4x^2+\frac 1 2 tx;\quad t\in\mathbb{R}^+$$
+Dabei sind alle Angaben in Metern und die Düse befindet sich im
+Ursprung.
+\begin{enumerate}
+\item Skizzieren Sie den Sachverhalt in einem Koordinatensystem.
+\item Zeichnen Sie die Fontänen für die Parameter $t=8$ und $t=12$ in
+  die Skizze ein.
+\item Bestimmen Sie den Parameter so, dass die Fontäne 1\,m von der
+  Düse entfernt auftrifft.
+\item Bestimmen Sie den maximalen Wert für $t$, so dass die Fontäne
+  noch im Becken auftrifft. Ermitteln Sie die Höhe, die die Fontäne
+  dann erreicht.
+\item Für welchen Wert von $t$ erreicht die Fontäne eine Höhe von
+  4\,m? Wie weit von der Düse entfernt trifft die Fontäne dann auf?
+\item Bestimmen Sie die Ortskurve des Scheitelpunktes.
+\item Bestimmen Sie alle gemeinsamen Punkte der Fontänen.
+\end{enumerate}
+
+\end{question}
+\begin{solution}
+  \begin{enumerate}
+    \begin{minipage}[t]{0.4\linewidth}
+    \item
+      Graph der Fontäne für verschiedene Parameter
+
+      \includegraphics[width=\linewidth]{pics/graph_4_1}
+    \end{minipage}
+    \hfill
+\setcounter{enumi}{2}
+\begin{minipage}[t]{0.5\linewidth}
+\item $t=8$
+\item $t=24$; $S(1,5|9)$
+\item $t=16$; 2\,m
+\item $S(\frac t {16}| \frac {t^2} {64})$;\; $y_S=4x^2$
+\item $F(0|0)$
+\end{minipage}
+\end{enumerate}
+\end{solution}
+
+\newpage
 \section{Lösungen der Aufgaben}
 {\scriptsize\printsolutions}
 \end{document}
