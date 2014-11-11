@@ -1,17 +1,17 @@
 datei = "graph_3"
 x_min=-5
-x_max=13
+x_max=9
 y_min=-30
-y_max=31
+y_max=29
 
-set output datei.".ps"
+set output datei.".eps"
 
 set style line 1 lt -1
 set style line 2 lt 2
 
 unset border
 
-set terminal postscript enhanced 
+set terminal postscript eps enhanced size 8cm,7cm
 set xrange [x_min:x_max]
 set yrange [y_min:y_max]
 
@@ -28,14 +28,15 @@ set arrow from 5.0/6.0* x_max,0 to x_max +1,0
 set arrow from 0,5.0/6.0* y_max to 0, y_max +1
 
 
-
-set lmargin at screen 0.01;
-set rmargin at screen 1;
-set bmargin at screen 0.005;
-set tmargin at screen 0.99;
+#set lmargin at screen 0.01;
+#set rmargin at screen 1;
+#set bmargin at screen 0.005;
+#set tmargin at screen 0.99;
 
 
 f(x)=0.2*x**3 -0.5*a*x**2 +x+5*a
 plot for [a=1:5:1] f(x)  title sprintf("t = %d",a);
 
-system sprintf("ps2pdf %s.ps %s.pdf && rm %s.ps",datei, datei, datei)
+system sprintf("epstool --copy --bbox %s.eps %s2.eps", datei,datei)
+
+system sprintf("epspdf %s2.eps %s.pdf && rm %s2.eps && rm %s.eps",datei,datei,datei, datei)

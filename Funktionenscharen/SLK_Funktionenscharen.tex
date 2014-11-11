@@ -43,7 +43,7 @@
   \small\texttt{a.ruhri@widarschule.de}\\
   \small Aktuelle Version unter \texttt{http://www.ruhri.net/}
 }
-\date{\small Version 0.1, September 2014}
+\date{\small Version 0.2, November 2014}
 
 \maketitle
 \section*{Vorbemerkungen}
@@ -54,14 +54,18 @@ Bedürfnis nach einer solchen Besprechung haben.
 
 Besonders wichtig ist das Notieren der wichtigsten Ergebnisse in ein
 Regelheft. Vergleichen Sie diese Regeln bzw. besprechen Sie sie mit
-der ganzen Klasse, damit Sie sicher sein können, dass sie korrekt sind.
+der ganzen Klasse, damit Sie sicher sein können, dass sie korrekt
+sind.
+
+Aufgaben, die mit $\bigstar$ markiert sind, haben ein gehobenes Niveau
+und können übersprungen werden.
 
 \subsection*{Voraussetzungen}
 Um diesen Kurs erfolgreich absolvieren zu können, ist es notwendig,
 dass Sie mit ganzrationalen Funktionen vertraut sind. Sie sollten mit
 der Untersuchung von Funktionen (Nullstellen, Extrema, Wendepunkte)
 und der Integralrechnung vertraut sein. 
-
+%\setcounter{tocdepth}{1} 
 \tableofcontents
 
 \section{Scharen von Funktionen}
@@ -201,8 +205,8 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
     \frac a 6=\frac 2 {27} a^3$$
     Also hat der Hochpunkt die Koordinaten: $H(\frac a 6|\frac 2 {27}a^3)$.
  
-  \item Vergleichen Sie mit Ihren Klassenkolleginnen! 
-  \end{enumerate}
+  \item Vergleichen Sie mit Ihren Klassenkolleginnen!
+   \end{enumerate}
 \end{solution}
   Die $V_a$ mit $a\in\mathbb{R}$ bilden zusammen eine Schar. Jedes
   einzelne $V_a$ ist Mitglied der Schar. Das gleiche gilt für die
@@ -325,9 +329,10 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
      $v=16,5735\,$m/s die gesuchte Lösung.
   \end{enumerate}
 \end{solution}
-
 \begin{question}
 
+  Folgende Aufgabe dient dazu, ein Gefühl für die Wirkung von
+  Parametern auf die Gestalt von Parabeln zu bekommen. 
   Frischen Sie Ihr Wissen über Parabeln und ihre Gleichungen aus der
   11. Klasse auf. Erläutern Sie die Bedeutung der Koeffizienten in den
   verschiedenen Arten der Parabelgleichungen:
@@ -335,9 +340,8 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   f(x)=a(x-d)\cdot(x-e)$$
   Überlegen Sie in den folgenden Aufgaben, welche Merkmale der Parabel
   sich ändern, wenn man den Parameter $t\in\mathbb{R}^+$ verändert und
-  welche sich 
-  nicht verändern. Formen Sie gegebenfalls den Funktionsterm in eine
-  Form um.
+  welche sich  nicht verändern. Formen Sie gegebenfalls den
+  Funktionsterm in eine andere Form um. 
   \begin{enumerate}\itemsep0pt
     \begin{multicols}{2}
     \item $f_t(x)=-\frac 1 2 tx^2+9$
@@ -380,11 +384,12 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   \end{multicols}
 \end{question}
 \begin{solution}
-  \begin{multicols}{3}
+  \begin{multicols}{2}
     \begin{enumerate}
     \item $m=f^\prime_a(0)=a;\quad a=1$
     \item $m=-2a;\quad a=- \frac 1 2$
-    \item $m=-a;\quad a=-1$
+    \item Achtung beim Ableiten: $a^3$ ist ein konstanter Faktor, der
+      nicht verändert wird! $f^\prime_a(x)=3a^3x^2-a$; $m=-a;\quad a=-1$
     \item $m=a^2;\quad a=\pm 1$
     \item $m=-2;\quad$ nicht möglich
     \item $m=a^2;\quad a=\pm 1$
@@ -392,7 +397,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   \end{multicols}
 \end{solution}
 
-\begin{question}
+\begin{question}[name=$\bigstar$ Aufgabe]
   
 Bearbeiten Sie die Aufgaben aus Aufgabe \ref{scharen:tangente} und betrachten
 Sie nicht die Stelle $x=0$, sondern nun die Stelle $x=1$ (oder etwas
@@ -403,7 +408,6 @@ schwieriger geworden ist.
 
 Welche Aufgabe ist für Sie nur mit Taschenrechner lösbar? 
 \end{question}
-
 \begin{question}
   
   Gegeben ist eine Schar von Funktionen $f_t$ mit
@@ -449,7 +453,6 @@ Welche Aufgabe ist für Sie nur mit Taschenrechner lösbar?
     \end{enumerate}
   \end{multicols}
 \end{solution}
-  
 \section{Ortskurven}
 Verändert man den Parameter einer Funktionenschar, so verändern sich
 die Funktionen und mit ihnen die Graphen in der Regel\footnote{Stimmt
@@ -462,7 +465,7 @@ Hochpunkt und beschreibt dabei eine bestimmte Kurve -- seine
 Ortskurve.
 \subsection{Bestimmung von Ortskurven}
 Betrachten Sie den Hochpunkt des Volumens aus dem Schachtelproblem:
-$$H\left(\frac a 6\mid\frac 2 {27}a^3\right)$$ %%%Mittelstrich anpassen
+$H\left(\frac a 6\mid\frac 2 {27}a^3\right)$. %%%Mittelstrich anpassen
 Sie sehen, die Koordinaten sind vom Parameter $a$ -- der Seitenlänge
 des Quadrats -- abhängig.
 
@@ -520,42 +523,48 @@ Also liegen alle Hochpunkte auf dem Graphen der Funktion $f(x)=16x^3$.
   \end{multicols}
 \end{solution}
 
+\noindent\begin{minipage}[b]{0.49\linewidth}
 \section{Fixpunkte}
-\begin{minipage}[b]{0.39\linewidth}
-  In der Abbildung sind die Graphen einiger Funktionen der Schar
+In der Abbildung sind die Graphen einiger Funktionen der Schar
 $$f_a(x)=\frac 1 5 x^3 -\frac 1 2 ax^2 +x+5a;\quad a\in\mathbb{R}^+$$
 dargestellt.
 
 Es ist leicht zu sehen, dass alle Mitglieder dieser Schar zwei
-gemeinsame Punkte haben. Nicht alle Scharen haben gemeinsame Punkte,
-sogenannte Fixpunkte. 
+gemeinsame Punkte haben.
 
-\vspace{1cm}
+Nicht alle Scharen haben gemeinsame Punkte,
+sogenannte Fixpunkte. Betrachten Sie zum Beispiel die Schar
+$$f_a(x)=x^2+a$$
+
+%\vspace{1.5cm}
 
 \end{minipage}
 \hfill
-\begin{minipage}[b]{0.6\linewidth}
+\begin{minipage}[b]{0.5\linewidth}
   \includegraphics[width=1\linewidth]{pics/graph_3}
 \end{minipage}
 \subsection{Bestimmung von Fixpunkten}
 Um die Fixpunkte einer Schar zu bestimmen, muss man folgende Gleichung
 lösen:
 $$f_a(x)=f_b(x)\quad \textrm{mit } a\neq b$$
-Versuchen Sie die Fixpunkte der obigen Schar zu bestimmen, ehe Sie
-weiter lesen.
-
-Dem obigen Ansatz folgend erhält man die Gleichung: 
+Diese Gleichug ist äquivalent zu 
+$$ f_a(x)-f_b(x)=0$$
+und wir erhalten durch Einsetzen der Funktionsterme
 $$\frac 1 5 x^3 -\frac 1 2 ax^2 +x+5a 
-=
-\frac 1 5 x^3 -\frac 1 2 bx^2+x+5b$$
-Wir ziehen $\frac 1 5 x^3$ und $x$ auf beiden Seiten ab und erhalten:
-$$-\frac 1 2 ax^2+5a = -\frac 1 2 bx^2+5b$$
-Wir stellen alle Terme mit $x$ nach links, die konstanten nach rechts:
-$$\frac 1 2 bx^2-\frac 1 2 ax^2 = 5b-5a$$
-Dann klammern wir $b-a$ aus (das ist quasi der Hauptschritt):
-$\frac 1 2 x^2 (b-a) = 5(b-a)$.
-Da $b\neq a$, ist $b-a\neq 0$ und wir dürfen durch $b-a$ teilen:
-$\frac 1 2 x^2= 5$.
+-
+\frac 1 5 x^3 +\frac 1 2 bx^2-x-5b=0$$
+Wir ordnen die Terme nach den Potenzen von $x$ und den Koeffizienten:
+$$\frac 1 5 x^3 -
+\frac 1 5 x^3
+-\frac 1 2 ax^2 +\frac 1 2 bx^2
+ +x -x +5a -5b=0$$
+Man sieht sofort: Die Terme ohne Parameter heben sich gegenseitig weg,
+die anderen unterscheiden sich nur im Parameter ($a$ oder $b$) und im Vorzeichen:
+$$-\frac 1 2 ax^2 +\frac 1 2 bx^2 +5a -5b=0$$
+Dann klammern wir $a-b$ aus (das ist quasi der Hauptschritt):
+$$-(a-b)\cdot \frac 1 2 x^2+ (a-b)\cdot 5 = 0$$
+Da $a\neq b$, ist $a-b\neq 0$ und wir dürfen durch $a-b$ teilen:
+$-\frac 1 2 x^2+5 = 0$.
 Wir lösen die quadratische Gleichung und erhalten als Lösungen:
 $x_1=\sqrt{10};\; x_2=-\sqrt{10}$. Es bleibt nur noch, die Werte in
 $f_a$ einzusetzen (dabei wählen wir ein möglichst bequemes $a$) um die
@@ -594,7 +603,7 @@ sind die Düsen so angebracht, dass die Wasserfontänen im rechten Winkel
 zum Rand aufsteigen, eine Parabel beschreiben und dann im Becken auf
 das Wasser auftreffen. Dabei kann die Parabel in Abhängigkeit vom
 Wasserdruck durch folgende Gleichung modelliert werden:
-$$f_t(x)=4x^2+\frac 1 2 tx;\quad t\in\mathbb{R}^+$$
+$$f_t(x)=-4x^2+\frac 1 2 tx;\quad t\in\mathbb{R}^+$$
 Dabei sind alle Angaben in Metern und die Düse befindet sich im
 Ursprung.
 \begin{enumerate}
