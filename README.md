@@ -1,7 +1,7 @@
 SLK-Mathe
 =========
 
-Selbstlernkurse in Mathematilk für Oberstufenschüler.
+Selbstlernkurse in Mathematik für Oberstufenschüler.
 
 Die Schüler sollen in die Lage versetzt werden, sich anhand von kurzen Erklärungen und aufbauenden
 Übungsbeispielen ein begrenztes Thema selbst beizubringen.
