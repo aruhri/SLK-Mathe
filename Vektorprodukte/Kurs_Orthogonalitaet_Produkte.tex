@@ -93,10 +93,11 @@ sind, kann man das in Zeichen so schreiben: $$\vec{a}\perp\vec{b}$$
   kann (im $\mathbb{R}^2$), dann formulieren und notieren Sie diese
   Regel. Ansonsten  versuchen Sie anhand weiterer Beispiele die Regel zu
   finden.
-\item Beschreiben Sie das Gebilde, das alle zu einem Vektor (wieder im
-  $\mathbb{R}^2$)  orthogonalen Vektoren (aller Längen), bilden.
-\item Überlegen Sie, wie dieses Gebilde aller zu einem Vektor
-  orthogonaler Vektoren im $\mathbb{R}^3$ aussieht. Wie viele gleich
+\item Beschreiben Sie das geometrische Objekt, das entsteht, wenn ein
+  Punkt mit allen zu einem Vektor ( im $\mathbb{R}^2$)  orthogonalen
+  Vektoren (aller Längen), verschoben wird. 
+\item Überlegen Sie, wie diese Verschiebung mitallen zu einem Vektor
+  orthogonale Vektoren im $\mathbb{R}^3$ aussieht. Wie viele gleich
   lange orthogonale Vektoren hat ein Vektor im $\mathbb{R}^3$?
 \end{enumerate}
 
@@ -117,17 +118,37 @@ Pythagoras verwenden, denn er gilt nur in orthogonalen Dreiecken.
   Die beiden Vektoren in nebenstehender Skizze sind also genau dann
   orthogonal zueinander, wenn gilt: 
   $$|\vec{a}|^2 + |\vec{b}|^2 = |\vec{b} - \vec{a}|^2.$$
+  Dabei ist
+  $\vec{a}=
+  \begin{pmatrix}
+    a_1\\a_2
+  \end{pmatrix}$ und
+   $\vec{b}=
+  \begin{pmatrix}
+    b_1\\b_2
+  \end{pmatrix}$ 
 \end{minipage}
-Für die rechte Seite gilt: $$|\vec{b} - \vec{a}|=\sqrt{(b_1-a_1)^2 + (b_2-a_2)^2}$$
-Also: $$ |\vec{b} - \vec{a}|^2 =(b_1-a_1)^2 + (b_2-a_2)^2 =
-(b_1^2-2b_1a_1 + a_1^2) + (b_2^2-2b_2a_2 + a_2^2)$$
-Durch Ausklammern erhalten wir:
-$$ |\vec{b} - \vec{a}|^2 = (a_1^2+ a_2^2)+ (b_1^2+b_2^2)
--2\cdot(a_1b_1+a_2b_2)$$
-Für die linke Seite erhalten wir auf gleiche Weise: 
-$$|\vec{a}|^2 + |\vec{b}|^2 = (a_1^2+a_2^2) + (b_1^2+b_2^2)$$
+Wir betrachten nun die rechte und linke Seite der obigen Gleichung
+(Satz des Pythagoras) getrennt voneinander.
+Für die rechte Seite der Gleichung gilt nun:
+\begin{align*}
+|\vec{b} - \vec{a}|&=\sqrt{(b_1-a_1)^2 + (b_2-a_2)^2}\\
+\intertext{Quadrieren um die Wurzel loszuwerden und Anwenden der binomischen
+  Formeln ergibt dann:}
+|\vec{b} - \vec{a}|^2 &=(b_1-a_1)^2 + (b_2-a_2)^2 =
+(b_1^2-2b_1a_1 + a_1^2) + (b_2^2-2b_2a_2 + a_2^2)\\
+\intertext{Durch Umstellen und Ausklammern erhalten wir:}
+|\vec{b} - \vec{a}|^2 &= (a_1^2+ a_2^2)+ (b_1^2+b_2^2)
+-2\cdot(a_1b_1+a_2b_2)\\
+\intertext{Für die linke Seite der obigen Gleichung erhalten wir auf gleiche Weise:}
+|\vec{a}|^2 + |\vec{b}|^2 &= (a_1^2+a_2^2) + (b_1^2+b_2^2)\\
+\intertext{Insgesamt habe wir den Satz des Pythagoras folgendermaßen umgeformt:}
+  |\vec{a}|^2 + |\vec{b}|^2 &= |\vec{b} - \vec{a}|^2 \\
+ (a_1^2+ a_2^2)+ (b_1^2+b_2^2) &= (a_1^2+a_2^2) + (b_1^2+b_2^2)-2\cdot(a_1b_1+a_2b_2)
+\end{align*}
+
 Wenn wir linke und rechte Seite vergleichen, merken wir, dass der Satz
-des Pythagoras nur dann gilt wenn $ 2\cdot(a_1b_1+a_2b_2)=0$ also wenn
+des Pythagoras nur dann gilt, wenn $ 2\cdot(a_1b_1+a_2b_2)=0$, also wenn
 gilt: 
 $$a_1b_1+a_2b_2=0$$
 Insgesamt gilt also: $$\vec{a}\perp\vec{b} \Leftrightarrow a_1b_1+a_2b_2=0$$
@@ -256,8 +277,8 @@ verwenden.
   \end{multicols}
 \end{enumerate}\newpage
 \section{Skalarprodukt}
-Die verwendete Rechenart heißt das {\em Skalarprodukt} zweier
-Vektoren und es gilt:
+Die im vorigen Abschnitt verwendete Rechenart heißt das {\em
+  Skalarprodukt} zweier Vektoren und es gilt:
 $$ \vec{a} \cdot \vec{b} =
 \begin{pmatrix}
         a_1\\a_2\\a_3
@@ -272,6 +293,7 @@ Produktes ein {\em Skalar}, eine Maßzahl ist. Das Skalarprodukt wird
 Mit dem Ergebnis von oben gilt also:
 $$\vec{a}\cdot\vec{b} = 0 \Leftrightarrow \vec{a}\perp\vec{b}$$
 
+Formulieren Sie diesen Satz in eigenen Worten.
 
 \subsection{Skalarprodukt und Orthogonalität}
 \begin{enumerate}
@@ -352,7 +374,7 @@ $$g: \vec{x}=
   \item $A(3|4|-8);\; B(6|5|-4) ;\; C(5|2|-9)$
   \item $A(-1|6|-10);\; B(0|3|-11) ;\; C(-5|0|-7)$
   \end{enumerate}
-\item Bestimmen Sie {\em alle} Vektoren die sowohl zu $\vec{a}$ also
+\item Bestimmen Sie {\em alle} Vektoren, die sowohl zu $\vec{a}$ als
   auch zu $\vec{b}$ orthogonal sind.
   \begin{multicols}{2}
     \begin{enumerate}
