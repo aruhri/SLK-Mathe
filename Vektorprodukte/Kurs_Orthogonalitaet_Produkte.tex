@@ -1,13 +1,21 @@
 \documentclass[12pt,a4paper,twoside,fleqn]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[german]{babel}
+\usepackage[ngerman]{babel}
 \usepackage[left=25mm, top=20mm, bottom=20mm, right=20mm]{geometry}
-\usepackage{graphicx,color,marvosym,upgreek}
-\usepackage{amssymb,multicol,overpic}
-\usepackage{amsmath}
+\usepackage{graphicx,overpic,color,marvosym,upgreek}
+\usepackage{amssymb,multicol,amsmath}
 %\usepackage{ifthen}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{icomma} 
+
 
 \begin{document}
+
+\newcommand{\Vektor}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+\newcommand{\vektor}[3] {\begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}}
+\newcommand{\umf}[1]{\qquad\left|#1\right.}
+\newcommand{\uu}[1]{\underline{\underline{#1}}}
 
 \renewcommand{\thepage}{Seite~\arabic{page}}
 % \renewcommand{\thesection}{1.}
@@ -33,8 +41,9 @@
   zum selbständigen Lernen.}}
 \author{Alexander Ruhri\\
   \small\texttt{a.ruhri@widarschule.de}\\
-  \small Aktuelle Version unter \texttt{http://www.ruhri.net/}}
-\date{\small Version 0.3, September 2015}
+  \small Aktuelle Version unter \texttt{http://www.ruhri.net/}\\
+  \small Lösungen: Tim Strunkheide}
+\date{\small Version 0.4, Mai 2016}
 % Todo: Lösungen
 \maketitle
 \section*{Vorbemerkungen}
@@ -47,9 +56,13 @@ Um mit den Inhalten des Kurses zurechtzukommen ist es notwendig,
 dass Sie wissen, was ein Vektor ist, wie man die Länge eines Vektors
 berechnet und die Parameterdarstellung von Geraden bereits gelernt
 haben. Außerdem sollten Sie die Winkelfunktionen ($\sin, \cos$)
-wiederholt haben. 
+wiederholt haben.
+\subsection*{Arbeitsweise}
+Notieren Sie Ihre Rechnungen in einem Heft oder auf Blättern. Heben
+Sie dabei Regeln optisch hervor und übertrgen Sie diese nach
+Überprüfung in ein eigenes Regelheft.
 \tableofcontents
-\newpage
+\part{Kurs}
 \section{Orthogonale Vektoren}
 Das Wort orthogonal leitet sich vom griechischen
 $o\rho\theta o\varsigma$  (orthos)
@@ -89,16 +102,73 @@ sind, kann man das in Zeichen so schreiben: $$\vec{a}\perp\vec{b}$$
     \end{enumerate}
   \end{multicols}
 \item Wenn Sie eine einfache Regel gefunden haben, mit der man gleich lange
-  orthogonale Vektoren aus den Koordinaten des gegebenen Vektors bilden
-  kann (im $\mathbb{R}^2$), dann formulieren und notieren Sie diese
+  orthogonale Vektoren aus den Koordinaten des gegebenen Vektors  (im
+  $\mathbb{R}^2$) bilden
+  kann, dann formulieren und notieren Sie diese
   Regel. Ansonsten  versuchen Sie anhand weiterer Beispiele die Regel zu
   finden.
 \item Beschreiben Sie das geometrische Objekt, das entsteht, wenn ein
-  Punkt mit allen zu einem Vektor ( im $\mathbb{R}^2$)  orthogonalen
+  Punkt mit allen zu einem Vektor (im $\mathbb{R}^2$)  orthogonalen
   Vektoren (aller Längen), verschoben wird. 
-\item Überlegen Sie, wie diese Verschiebung mitallen zu einem Vektor
-  orthogonale Vektoren im $\mathbb{R}^3$ aussieht. Wie viele gleich
+\item Wie viele gleich
   lange orthogonale Vektoren hat ein Vektor im $\mathbb{R}^3$?
+\item Beschreiben Sie das geometrische Objekt, das entsteht, wenn ein
+  Punkt mit allen zu einem gegebenen Vektor orthogonalen Vektoren im
+  $\mathbb{R}^3$ verschoben wird. Welches Objekt erhalten Sie, wenn
+  die Vektoren alle gleich lang sind?
+\item Finden Sie eine Methode, wie man zu einem gegebenen Vektor im
+  $\mathbb{R}^3$ einen orthogonalen Vektor finden kann. Erweitern Sie
+  dazu die Regel, die Sie in 2.) gefunden haben. (Tipp: nehmen Sie die
+  0 zu Hilfe.) Geben Sie orthogonale Vektoren zu den folgenden
+  Vektoren an:
+  
+  \begin{multicols}{4}
+    \begin{enumerate}
+    \item $\vec{a}=  
+      \begin{pmatrix}
+        0\\1\\0
+      \end{pmatrix}
+      $
+    \item $\vec{b}=  
+      \begin{pmatrix}
+        1\\1\\0
+      \end{pmatrix}
+      $
+    \item $\vec{c}=  
+      \begin{pmatrix}
+        3\\0\\4
+      \end{pmatrix}
+      $
+    \item $\vec{d}=  
+      \begin{pmatrix}
+        -7\\2\\1
+      \end{pmatrix}
+      $
+    \end{enumerate}
+  \end{multicols}
+\item Untersuchen Sie, welche der folgenden Vektoren orthogonal
+  zueinander sind:
+  
+  \begin{multicols}{3}
+    \begin{enumerate}
+    \item $\vec{a}=  
+      \begin{pmatrix}
+        0\\0\\1
+      \end{pmatrix}
+      $
+    \item $\vec{b}=  
+      \begin{pmatrix}
+        -1\\0\\0
+      \end{pmatrix}
+      $
+    \item $\vec{c}=  
+      \begin{pmatrix}
+        0\\-3\\0
+      \end{pmatrix}
+      $
+     \end{enumerate}
+  \end{multicols}
+  
 \end{enumerate}
 
 \subsection{Vektoren auf Orthogonalität prüfen}
@@ -133,7 +203,7 @@ Wir betrachten nun die rechte und linke Seite der obigen Gleichung
 Für die rechte Seite der Gleichung gilt nun:
 \begin{align*}
 |\vec{b} - \vec{a}|&=\sqrt{(b_1-a_1)^2 + (b_2-a_2)^2}\\
-\intertext{Quadrieren um die Wurzel loszuwerden und Anwenden der binomischen
+\intertext{Quadrieren um die Wurzel loszuwerden und anwenden der binomischen
   Formeln ergibt dann:}
 |\vec{b} - \vec{a}|^2 &=(b_1-a_1)^2 + (b_2-a_2)^2 =
 (b_1^2-2b_1a_1 + a_1^2) + (b_2^2-2b_2a_2 + a_2^2)\\
@@ -275,9 +345,9 @@ verwenden.
       $
     \end{enumerate}
   \end{multicols}
-\end{enumerate}\newpage
+\end{enumerate}
 \section{Skalarprodukt}
-Die im vorigen Abschnitt verwendete Rechenart heißt das {\em
+Der im vorigen Abschnitt verwendete Term heißt das {\em
   Skalarprodukt} zweier Vektoren und es gilt:
 $$ \vec{a} \cdot \vec{b} =
 \begin{pmatrix}
@@ -404,7 +474,7 @@ $$g: \vec{x}=
 \item Drücken Sie die Diagonalen des Vierecks $ABCD$ mit $A(-2|-2)$,
   $B(0|3)$, $C(3|3)$ und $D(3|0)$ durch Vektoren aus. Überprüfen sie
   diese Vektoren auf Orthogonalität.
-\end{enumerate}\newpage
+\end{enumerate}
 \subsection{Winkelberechnung mithilfe des Skalarprodukts}
 Der kleinere Winkel zwischen zwei nicht kollinearen Vektoren ist der
 Winkel zwischen diesen Vektoren.
@@ -491,7 +561,7 @@ $$\cos{(\alpha)} = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}|\cdot|\vec{b}|}
   und $\angle BMC$. ($\angle ABC$ ist der Winkel mit Scheitelpunkt $B$
   zu den Punkten $A$ und $C$. Der Scheitelpunkt steht immer in der Mitte.)
 \end{enumerate}
-\newpage
+
 
 \section{Vektorprodukt}
 Es gibt ein weiteres Produkt von Vektoren: das Vektorprodukt. Wie der
@@ -601,8 +671,12 @@ $\vec{b} = \begin{pmatrix}
   0\\1\\-9
 \end{pmatrix}$$
 \end{enumerate}
-
-
+\section{Gemischte Übungen}
+Welche Terme sind berechenbar?
+\part{Lösungen}
+\fontsize{10pt}{10pt}\selectfont
+\setcounter{section}{0}
+\include{Loesungen}
 \end{document}
 
 
