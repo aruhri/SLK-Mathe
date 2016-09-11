@@ -74,8 +74,8 @@ sind, kann man das in Zeichen so schreiben: $$\vec{a}\perp\vec{b}$$
 \begin{enumerate}
 \item Zeichnen Sie Pfeile der Vektoren in ein Koordinatensystem ein und
   finden Sie (gleich lange) zu ihnen orthogonale Vektoren. Zeichnen
-  Sie die orthogonalen Vektoren ein und geben Sie ihre Koordinaten
-  an. 
+  Sie die orthogonalen Vektoren vom gleichen Punkt ausgehend ein und
+  geben Sie ihre Koordinaten an. 
 
   \begin{multicols}{4}
     \begin{enumerate}
@@ -202,11 +202,10 @@ Wir betrachten nun die rechte und linke Seite der obigen Gleichung
 (Satz des Pythagoras) getrennt voneinander.
 Für die rechte Seite der Gleichung gilt nun:
 \begin{align*}
-|\vec{b} - \vec{a}|&=\sqrt{(b_1-a_1)^2 + (b_2-a_2)^2}\\
-\intertext{Quadrieren um die Wurzel loszuwerden und anwenden der binomischen
+|\vec{b} - \vec{a}|^2&=(b_1-a_1)^2 + (b_2-a_2)^2\\
+\intertext{Anwenden der binomischen
   Formeln ergibt dann:}
-|\vec{b} - \vec{a}|^2 &=(b_1-a_1)^2 + (b_2-a_2)^2 =
-(b_1^2-2b_1a_1 + a_1^2) + (b_2^2-2b_2a_2 + a_2^2)\\
+|\vec{b} - \vec{a}|^2 &=(b_1^2-2b_1a_1 + a_1^2) + (b_2^2-2b_2a_2 + a_2^2)\\
 \intertext{Durch Umstellen und Ausklammern erhalten wir:}
 |\vec{b} - \vec{a}|^2 &= (a_1^2+ a_2^2)+ (b_1^2+b_2^2)
 -2\cdot(a_1b_1+a_2b_2)\\
@@ -476,14 +475,36 @@ $$g: \vec{x}=
   diese Vektoren auf Orthogonalität.
 \end{enumerate}
 \subsection{Winkelberechnung mithilfe des Skalarprodukts}
-Der kleinere Winkel zwischen zwei nicht kollinearen Vektoren ist der
-Winkel zwischen diesen Vektoren.
-Für das Skalarprodukt gilt folgende Beziehung:
+
+\hspace{5mm}\begin{minipage}[b]{.3\linewidth}
+  \begin{overpic}[scale=1,tics=10]%
+    {pics/Winkel}
+    \put(7,15){\small $\beta$}
+    \put(30,20){\small $\alpha$}
+    \put(60,2){\small $\vec{a}$}
+    \put(60,45){\small $\vec{b}$}
+  \end{overpic}
+\end{minipage}\hfill
+\begin{minipage}[b]{.65\linewidth}
+  Wenn man vom Winkel zwischen zwei Vektoren spricht, meint man immer
+  den  kleineren Winkel zwischen den Vektoren.
+  In diesem Beispiel ist $\alpha$ der kleinere Winkel. $\beta$ ist
+  überstreckt und es gilt: $\alpha + \beta = 360^\circ$.
+  Sind die Vektoren kollinear, so ist ihr Winkel offensichtlich
+  $0^\circ$. 
+\end{minipage}
+Für das Skalarprodukt gilt folgende Beziehung, die sich aus dem
+Kosinussatz ergibt und die wir hier ohne Herleitung verwenden:
 $$ \vec{a}\cdot\vec{b}=  |\vec{a}|\cdot|\vec{b}|\cdot \cos{(\alpha)}$$
-bzw.
+Stellt man nach $\cos(\alpha)$ um, so erhält man:
 $$\cos{(\alpha)} = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}|\cdot|\vec{b}|}
 \textrm{\quad mit } 0^\circ\leq \alpha\leq 180^\circ$$
-
+Mit dem Arkuskosinus ($\arccos$ bzw. $\cos^{-1}$) als Umkehrfunktion des Kosinus
+können wir nach $\alpha$ auflösen und erhlaten so eine Formel zur
+Berechnung des Winkels zwischen zwei Vektoren:
+$$\alpha = \cos^{-1}\left(
+  \frac{\vec{a}\cdot\vec{b}}{|\vec{a}|\cdot|\vec{b}|}
+   \right)$$ 
 \begin{enumerate}
 \item Überlegen Sie, wie der Satz von der Orthogonalität ($\alpha =
   90^\circ$) mit diesem Satz in Übereinstimmung gebracht werden kann.
