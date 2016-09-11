@@ -10,6 +10,11 @@
 %% http://www.ctan.org/pkg/exsheets
 \usepackage[totoc=false]{exsheets}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO:  weitere Übungsaufgaben
+% Lösungen zu Aufgabe 5
+% Graph um Ortskurven zu veranschaulichen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -43,7 +48,7 @@
   \small\texttt{a.ruhri@widarschule.de}\\
   \small Aktuelle Version unter \texttt{http://www.ruhri.net/}
 }
-\date{\small Version 0.2, November 2014}
+\date{\small Version 0.3, September 2017}
 
 \maketitle
 
@@ -80,9 +85,20 @@ in den Funktionsterm aufzunehmen, damit man nicht für jede neue
 Situation eine neue Funktion braucht, sondern einfach nur den
 Parameter anpassen muss.
 
+Das kann zum Beispiel sinnvoll sein, wenn man das Wachstum einer
+Pflanzenpopulation mathematisch modelliert und dieses Wachstum von
+der Durchschnittstemperatur oder der Menge an verfügbaren Nährstoffen
+abhängt. \\
+Ein weiteres Beispiel wäre die Flugparabel eines in einem bestimmten
+Winkel abgeschossenen Projektils, die von der Anfangsgeschwindigkeit
+des Projektils abhängt, weil die Parabel höher und weiter wird, wenn
+das Projektil schneller abgeschossen wird.
+
 Dadurch entstehen unter Umständen unendliche viele Funktionen (für
 jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
-„Schar“ wird diese Zusammengehörigkeit zum Ausdruck gebracht.
+„Schar“ wird diese Zusammengehörigkeit zum Ausdruck gebracht (Wie die
+Vögel einer Vogelschar, die gemeinsam fliegen aber nicht alle exakt
+die gleiche Bahn beschreiben.).
 
 \subsection{Das Schachtelproblem}
 \noindent\begin{minipage}[t]{.75\linewidth}
@@ -100,7 +116,7 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
   \item Bestimmen Sie den Funktionsterm\footnote{Der Funktionsterm ist
     der Term „$x^3-4x$“ in der Funktionsgleichung $f(x)=x^3-4x$, also
     in der Regel die rechte Seite der Funktionsgleichung.} des Volumens $V(x)$ einer Schachtel aus
-    einer Pappe mit Kantenlänge $a$ in Abhängigkeit von $x$.
+    einer Pappe mit Seitenlänge $a$ in Abhängigkeit von $x$.
     \begin{multicols}{3}
       \begin{enumerate}
       \item $a=30\,$cm
@@ -109,14 +125,14 @@ jeden möglichen Parameter eine) die zusammen gehören. Mit dem Begriff
       \end{enumerate}
     \end{multicols}
   \item Welche Werte darf denn das $x$ annehmen, damit die
-    mathematische Beschreibung im Sachzusammenhang Sinn macht?
+    mathematische Beschreibung im Sachzusammenhang Sinn ergibt?
   \item Bestimmen Sie für jede Schachtel aus der vorigen Aufgabe das
     $x$, bei dem das Volumen der Schachtel maximal ist.
   \item \label{regel1}Notieren Sie die Regelmäßigkeit, die Sie dabei feststellen konnten.
   \end{enumerate}
 
   Zur Vereinfachung, damit man nicht für jede neue Pappe eine neue
-  Funktion braucht, kann die Kantenlänge der Pappe unbestimmt gelassen 
+  Funktion braucht, kann die Seitenlänge der Pappe unbestimmt gelassen 
   werden und als Parameter $a$ in den Funktionsterm eingeführt werden.
   \begin{enumerate}[resume]
   \item Bestimmen Sie den Funktionsterm des Volumens $V_a(x)$ einer
@@ -480,7 +496,7 @@ von $a$ in einem Koordinatensystem dar. Überlegen Sie sich vorher,
 welche Maße das Koordinatensystem haben muss und welche Quadranten
 überhaupt benötigt werden. Es gelte dabei $1\leq a\leq 30$. 
 
-Welcher Art ist die Kurve die alle Hochpunkte zusammen bilden?
+Welcher Art ist die Kurve, die alle Hochpunkte zusammen bilden?
 Vergleichen Sie mit Ihren Kollegen.
 
 Um eine mathematische Beschreibung für die Ortskurve zu bekommen,
@@ -532,14 +548,14 @@ Also liegen alle Hochpunkte auf dem Graphen der Funktion $f(x)=16x^3$.
 \noindent\begin{minipage}[b]{0.49\linewidth}
 \section{Fixpunkte}
 In der Abbildung sind die Graphen einiger Funktionen der Schar
-$$f_a(x)=\frac 1 5 x^3 -\frac 1 2 ax^2 +x+5a;\quad a\in\mathbb{R}^+$$
+$$f_t(x)=\frac 1 5 x^3 -\frac 1 2 tx^2 +x+5t;\quad t\in\mathbb{R}^+$$
 dargestellt.
 
 Es ist leicht zu sehen, dass alle Mitglieder dieser Schar zwei
-gemeinsame Punkte haben.
+gemeinsame Punkte -- sogenannte Fixpunkte --  haben.
 
-Nicht alle Scharen haben gemeinsame Punkte,
-sogenannte Fixpunkte. Betrachten Sie zum Beispiel die Schar
+Nicht alle Scharen haben gemeinsame Punkte. Betrachten Sie zum
+Beispiel die Schar 
 $$f_a(x)=x^2+a$$
 
 %\vspace{1.5cm}
@@ -558,7 +574,7 @@ $$ f_a(x)-f_b(x)=0$$
 und wir erhalten durch Einsetzen der Funktionsterme
 $$\frac 1 5 x^3 -\frac 1 2 ax^2 +x+5a 
 -
-\frac 1 5 x^3 +\frac 1 2 bx^2-x-5b=0$$
+\left(\frac 1 5 x^3 -\frac 1 2 bx^2+x+5b\right)=0$$
 Wir ordnen die Terme nach den Potenzen von $x$ und den Koeffizienten:
 $$\frac 1 5 x^3 -
 \frac 1 5 x^3
@@ -573,9 +589,11 @@ Da $a\neq b$, ist $a-b\neq 0$ und wir dürfen durch $a-b$ teilen:
 $-\frac 1 2 x^2+5 = 0$.
 Wir lösen die quadratische Gleichung und erhalten als Lösungen:
 $x_1=\sqrt{10};\; x_2=-\sqrt{10}$. Es bleibt nur noch, die Werte in
-$f_a$ einzusetzen (dabei wählen wir ein möglichst bequemes $a$) um die
+$f_a$ einzusetzen  um die
 $y$-Werte der Fixpunkte zu bekommen und erhalten:
-$F_1(-\sqrt{10}|-3\sqrt{10})$ und $F_2(\sqrt{10}|3\sqrt{10})$.
+$F_1(-\sqrt{10}|-3\sqrt{10})$ und $F_2(\sqrt{10}|3\sqrt{10})$. Da die
+Punkte ja unabhängig vom Parameter $a$ sind, fällt das $a$ im Laufe
+der Rechnung raus.
 \begin{question}
 
   Bestimmen Sie die gemeinsamen Punkte der folgenden Scharen.
@@ -616,7 +634,7 @@ Ursprung.
 \item Skizzieren Sie den Sachverhalt in einem Koordinatensystem.
 \item Zeichnen Sie die Fontänen für die Parameter $t=8$ und $t=12$ in
   die Skizze ein.
-\item Bestimmen Sie den Parameter so, dass die Fontäne 1\,m von der
+\item Bestimmen Sie den Parameter $t$ so, dass die Fontäne 0,5\,m von der
   Düse entfernt auftrifft.
 \item Bestimmen Sie den maximalen Wert für $t$, so dass die Fontäne
   noch im Becken auftrifft. Ermitteln Sie die Höhe, die die Fontäne
