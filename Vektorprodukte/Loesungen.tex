@@ -7,7 +7,7 @@
 \section{Orthogonale Vektoren}
 \subsection{Orthogonale Vektoren finden}
 \begin{enumerate}
-\item Die nächstliegendsten Vektorkombinationen sind:
+\item Die nahliegendsten Vektorkombinationen sind:
   \begin{multicols}{4}
   \item[\textbf{a)}] 
     $ \Vektor{-1}{0}, \Vektor{1}{0}  $ 
@@ -34,7 +34,7 @@
   %%   \includegraphics{pics/Vektor-Orthogonalitaet.jpg}
   %%   \caption{Unendlich viele Vektoren}
   %% \end{figure}
-\item Es entsteht eine Ebene, die orthogonal zum ausgangsvektor
+\item Es entsteht eine Ebene, die orthogonal zum Ausgangsvektor
   liegt. Sind die Vektoren alle gleich lang, so enteht ein Kreis,
   dessen Mittelpunkt der nicht verschobene Punkt ist und dessen
   Radius gleich der Länge der Vektoren ist.
@@ -65,8 +65,8 @@
     \end{enumerate}
   \end{multicols}
 \item Sie sind alle paarweise zueinander orthogonal, da sie alle eine
-  jeweils andere Koordinate nicht 0 haben (sie sind jeweils parallel
-  zu einer koordinatenachse).
+  jeweils andere Koordinate haben, die nicht 0 ist. (Sie sind jeweils parallel
+  zu einer Koordinatenachse)
 \end{enumerate}
 \subsection{Vektoren auf Orthogonalität prüfen}
 	
@@ -112,30 +112,39 @@
 				\item[\textbf{a.)}] 	$ 1\cdot0 + 1\cdot0 + 1\cdot0 = 0 $ 	\\ Also sind die Vektoren orthogonal.
 				\item[\textbf{b.)}] 	$ 2\cdot(-4)+3\cdot0+4\cdot2=-8+8= 0$ 	\\ Also sind die Vektoren orthogonal.
 				\item[\textbf{c.)}] 	$ 1\cdot2+2\cdot2+3\cdot(-2)=2+4-6=0$ 	\\ Also sind die Vektoren orthogonal.
-				\item[\textbf{d.)}] 	$0\cdot0+0\cdot(-1)+2\cdot1=2$ 			\\ Also sind die Vektoren \underline{nicht} orthogonal.
+				\item[\textbf{d.)}] 	$0\cdot0+0\cdot(-1)+2\cdot1=2$ 		\\ Also sind die Vektoren \underline{nicht} orthogonal.
 			\end{multicols}
 		
 		
 		\item
 		Wir setzen jeweils in die Gleichung aus \textbf{3.)} ein und lösen nach a auf:
-			\begin{multicols}{2}
-				\item[\textbf{a.)}] $$ 3\cdot(-1) + 4\cdot2 + 1\cdot a = 0 $$
-									$$ -3 + 8 + a = 0 	\qquad | +3 -8 $$ 
-									$$ \uu{a = -5}$$
-				\item[\textbf{b.)}] $$ 7\cdot1+1\cdot a+5\cdot2=0$$
-									$$7+a+10=0 			\qquad |-17$$
-									$$\uu{a=-17}$$
-			\end{multicols}
-			\begin{multicols}{2}	
-				\item[\textbf{c.)}]	$$10\cdot a+27\cdot1+0,5\cdot(-14)=0$$
-									$$10a+27-7=0 		\qquad |-20\quad |:10$$
-									$$\uu{a=-2}$$
-				\item[\textbf{d.)}] $$8\cdot2+3\cdot a+1\cdot a=0$$
-									$$16+4a=0 			\qquad |-16 \quad |:4$$
-									$$\uu{a=-4}$$
-			\end{multicols}
+		\item[\textbf{a.)}] 
+		\begin{align*}
+			3\cdot(-1) + 4\cdot2 + 1\cdot a &= 0 \\
+			-3 + 8 + a &= 0 	\qquad | +3 -8  \\
+			\uu{a = -5}							
+		\end{align*}
+		\item[\textbf{b.)}] 
+		\begin{align*}
+			7\cdot1+1\cdot a+5\cdot2&=0\\
+			7+a+10&=0 			\qquad |-17\\
+			\uu{a=-17}& \\
+		\end{align*}
+		\item[\textbf{c.)}]
+		\begin{align*}
+				10\cdot a+27\cdot1+0,5\cdot(-14)&=0\\
+			10a+27-7&=0 		\qquad |-20\quad |:10\\
+			\uu{a=-2}
+		\end{align*}
+	
+	\item[\textbf{d.)}] 
+		\begin{align*}
+			8\cdot2+3\cdot a+1\cdot a &=0 \\
+			16+4a &=0 			\qquad |-16 \quad |:4\\
+			\uu{a=-4}
+		\end{align*}
 	\end{enumerate}
-
+	
 \section{Skalarprodukt}
 	\subsection{Skalarprodukt und Orthogonalität}	 
 	\begin{enumerate}
@@ -245,7 +254,7 @@ Dann fangen wir die Formel nach $\alpha$ umzustellen:
 		$$|\vec{CA}-\vec{AB}|^2-|\vec{CA}|^2-|\vec{AB}|^2=-2|\vec{CA}||\vec{AB}|\cdot \cos(\alpha) $$
 Wir schreiben die Vektoren ganz auf,	
 		$$\left|\vektor{c_1-a_1}{c_2-a_2}{c_3-a_3}\right|^2-\left|\vektor{c_1}{c_2}{c_3}\right|^2-\left|\vektor{a_1}{a_2}{a_3}\right|^2=-2|\vec{CA}||\vec{AB}| \cdot \cos(\alpha) $$
-Um sie dann besser auseinanderziehen zu können:	
+um sie dann besser auseinanderziehen zu können:	
 		$$\sqrt{(c_1-a_1)^2+(c_2-a_2)^2+(c_3-a_3)^2}^2-\sqrt{{c_1}^2+{c_2}^2+{c_3}^2}^2-\sqrt{{a_1}^2+{a_2}^2+{a_3}^2}^2=$$
 		$$-2|\vec{CA}||\vec{AB}|\cdot \cos(\alpha) $$
 Die Wurzeln und die Quadrate eliminieren sich:	
@@ -281,42 +290,99 @@ Als letztes Kürzen wir mit $-2$ und können aus dem Rest oberhalb des Bruches w
 %Neuaufsetzung wegen komischen Einschubs		
 		\begin{enumerate}
 		\setcounter{enumi}{3}
+		\item 
+		\begin{enumerate}
+			\item	$\vec{AB}=\Vektor{3}{-2} \qquad \vec{BC}=\Vektor{-1}{4} \qquad \vec{CA}=\Vektor{-2}{-2}$
+			\bigskip\newline
+			$  a=|\vec{BC}| = \left|\Vektor{-1}{4}\right| = \sqrt{(-1)^2+4^2} = \sqrt{1+16} = \sqrt{17}\\ b=|\vec{CA}|=\left|\Vektor{-2}{-2}\right| = \sqrt{(-2)^2+(-2)^2} = \sqrt{4+4}=\sqrt{8}\\ 
+			c=|\vec{AB}| = \left|\Vektor{3}{-2}\right| = \sqrt{3^2+(-2)^2} = \sqrt{9+4} =\sqrt{13}$\\
+			\bigskip\newline
+			$ \alpha = cos^{-1} \left(\frac{\vec{AB} \cdot \vec{CA}}{|\vec{AB}|\cdot |CA|}\right) = cos^{-1} \left(\frac{-6+4}{\sqrt{13} \cdot \sqrt{8}}\right) = 78\mathrm{,} 69^\circ $\\
+			$ \beta = cos^{-1} \left(\frac{\vec{AB}\cdot\vec{BC}}{|\vec{AB}|\cdot|BC|}\right)=cos^{-1} \left(\frac{-3-8}{\sqrt{13}\cdot\sqrt{17}}\right) =42,27^\circ$\\
+			$ \gamma = cos^{-1} \left(\frac{\vec{BC}\cdot\vec{CA}}{|\vec{BC}|\cdot|CA|}\right)=cos^{-1} \left(\frac{2-8}{\sqrt{17}\cdot\sqrt{8}}\right) =102,96^\circ $
+			
 			\item 
-				\begin{enumerate}
-					\setcounter{enumii}{1}
-				\item	$\vec{AB}=\Vektor{3}{-2} \qquad \vec{BC}=\Vektor{-1}{4} \qquad \vec{CA}=\Vektor{-2}{-2}$
-\bigskip\newline
-				$  a=|\vec{BC}| = \left|\Vektor{-1}{4}\right| = \sqrt{(-1)^2+4^2} = \sqrt{1+16} = \sqrt{17}\\ b=|\vec{CA}|=\left|\Vektor{-2}{-2}\right| = \sqrt{(-2)^2+(-2)^2} = \sqrt{4+4}=\sqrt{8}\\ c=|\vec{AB}| = \left|\Vektor{3}{-2}\right| = \sqrt{3^2+(-2)^2} = \sqrt{9+4} =\sqrt{13}$\\
-\bigskip\newline
-				$ \alpha = cos^{-1} \left(\frac{\vec{AB} \cdot \vec{CA}}{|\vec{AB}|\cdot |CA|}\right) = cos^{-1} \left(\frac{-6+4}{\sqrt{13} \cdot \sqrt{8}}\right) = 78\mathrm{,} 69^\circ $\\
-					$ \beta = cos^{-1} \left(\frac{\vec{AB}\cdot\vec{BC}}{|\vec{AB}|\cdot|BC|}\right)=cos^{-1} \left(\frac{-3-8}{\sqrt{13}\cdot\sqrt{17}}\right) =42,27^\circ$\\
-				$ \gamma = cos^{-1} \left(\frac{\vec{BC}\cdot\vec{CA}}{|\vec{BC}|\cdot|CA|}\right)=cos^{-1} \left(\frac{2-8}{\sqrt{17}\cdot\sqrt{8}}\right) =102,96^\circ $
-			\end{enumerate}
+			$c= |\vec{AB}|=\left|\Vektor{ 8}{-3} \right|=\sqrt{73}\\
+			 a= |\vec{BC}|=\left|\Vektor{-6}{10}\right|=\sqrt{136}\\
+			 b= |\vec{CA}|=\left|\Vektor{-2}{-7}\right|=\sqrt{53}$
+			 
+			$\alpha=46,91^\circ\\
+			 \beta=38,48^\circ\\
+			 \gamma=94,61^\circ$
 			
-			\bigskip
-			\item 	
-					\begin{enumerate}									
-				\item	$\cos(30) =\dfrac{\vektor{0}{1}{0} \cdot \vektor{\sqrt{3}}{b}{0}} {\left|\vektor{0}{1}{0}\right| \cdot \left|\vektor{\sqrt{3}}{b}{0}\right|} = \dfrac{b}{\sqrt{3+b^2}}      \qquad \left|\cdot \sqrt{3+b^2}\right.$\\
-						
-						$\cos(30) \cdot \sqrt{3+b^2} = b 							\umf{^2}$ \\
-						 
-						$\cos(30)^2 \cdot (3+b^2) = b^2$\\
-						 
-						$\cos(30)^2 \cdot 3 + \cos(30)^2 \cdot b^2 = b^2      \qquad \left|-b^2\cdot cos(30)^2\right.$\\
-						 
-						$\cos(30)^2 \cdot 3 = 1 \cdot b^2 - (\cos(30)^2 \cdot b^2) $\\
-						 
-						$\cos(30)^2 \cdot 3 = b^2 \cdot (1-cos(30)^2) \umf{:(1-cos(30))}$\\
-						 
-						$\dfrac{\cos(30)^2 \cdot 3}{1-cos(30)^2}=b^2 \umf{\sqrt{~}}$\\
-						
-						$\dfrac{\sqrt{\cos(30)^2 \cdot 3}}{\sqrt{1-cos(30)^2}}=b$\\
-						
-						$\uu{\pm3=b}$
-						 
-			\item		
-			\end{enumerate}			
-			
-					
+			\item
+			$|\vec{AB}|=\sqrt{20}
+			 |\vec{BC}|=\sqrt{20}
+			 |\vec{CA}|=\sqrt{32}$
+			 
+			 $\alpha=46,91^\circ\\
+			 \beta=38,48^\circ\\
+			 \gamma=94,61^\circ$
+			 \item
 		\end{enumerate}
+		
+		\bigskip
+		\item 	
+		\begin{enumerate}									
+			\item	$\cos(30) =\dfrac{\vektor{0}{1}{0} \cdot \vektor{\sqrt{3}}{b}{0}} {\left|\vektor{0}{1}{0}\right| \cdot \left|\vektor{\sqrt{3}}{b}{0}\right|} = \dfrac{b}{\sqrt{3+b^2}}      \qquad \left|\cdot \sqrt{3+b^2}\right.$\\
+			
+			\begin{align*}
+			\cos(30) \cdot \sqrt{3+b^2} = b &	\umf{^2} \\			
+			\cos(30)^2 \cdot (3+b^2) = b^2&\\			
+			\cos(30)^2 \cdot 3 + \cos(30)^2 \cdot b^2 = b^2      &\umf{\-b^2\cdot cos(30)^2}\\			
+			\cos(30)^2 \cdot 3 = 1 \cdot b^2 - (\cos(30)^2 \cdot b^2)\\			
+			\cos(30)^2 \cdot 3 = b^2 \cdot (1-cos(30)^2) &\umf{:(1-cos(30))}\\		
+			\dfrac{\cos(30)^2 \cdot 3}{1-cos(30)^2}=b^2 &\umf{\sqrt{~}}\\			
+			\dfrac{\sqrt{\cos(30)^2 \cdot 3}}{\sqrt{1-cos(30)^2}}=b\\			
+			\uu{\pm3=b}
+			\end{align*}
+			\item	geht nicht%? %ich muss gestehen es ist schon lange her und das sollten Sie nochmal bestätigen.
+		\end{enumerate}			
+		
+		\item
+		\begin{align*}
+			&&\sphericalangle \vec{a}, \vec{b}   &=45^\circ\\
+			&&\sphericalangle \vec{-a}, \vec{b}  &=135^\circ\\
+			&&\sphericalangle \vec{a} , \vec{-b} &=135^\circ\\
+			&&\sphericalangle \vec{-a}, \vec{-b} &=45^\circ\\
+		\end{align*}
+		
+		\item
+		Wenn das Skalarprodukt negativ ist, ist der ganze Bruch negativ. Dann geben wir $cos^{-1}$ eine negative Zahl. 
+		\begin{align*}
+		cos^{-1}(1)		&= 0\\
+		cos^{-1}(0,5)	&= 60\\
+		cos^{-1}(0)		&= 90\\
+		cos^{-1}(-0,5)	&= 120\\
+		cos^{-1}(-1)	&= 180\\
+		\end{align*}
+		Wenn das Skalarprodukt negativ ist, scheint der Winkel größer als $90^\circ$ zu sein.
+		
+		\item %? 
+		
+		\item %M ist Schnittpunkt der Raumdiagonalen mit was?
+	\end{enumerate}
+	
+\subsection{Vektorprodukt}
+	\begin{enumerate}
+\item
+	\begin{enumerate}
+		\item $\vec{a} \times \vec{b} = \vektor{1}{2}{3}\times\vektor{4}{5}{6}=\vektor{2 \cdot 6 - 3 \cdot 5}{3 \cdot 4 - 1 \cdot 6}{1 \cdot 5 - 2 \cdot 4} =\vektor{-3}{6}{-3}$
+		\item $\vektor{1}{2}{0}\times\vektor{3}{1}{0}=\vektor{0}{0}{-5}$
+		\item $\vektor{-4}{3}{0}\times\vektor{2}{-9}{-1}=\vektor{-3}{-4}{30}$
+		\item $\vektor{0}{1}{-3}\times\vektor{8}{-8}{5}= \vektor{-19}{-24}{-8}$
+	\end{enumerate}
 
+\item
+	\begin{enumerate}
+		\item 1b:	$\vektor{3}{1}{0}\times\vektor{1}{2}{0}=\vektor{0}{0}{-5}$\\
+			  1c:	$\vektor{2}{-9}{-1}\times\vektor{-4}{3}{0}=\vektor{-3}{-4}{30}$\\
+			  Schlussfolgerung: $\vec{a}\times\vec{b}=\vec{b}\times\vec{a}$\bigskip
+		\item 1b:	$\vektor{1}{2}{0}\cdot\left(\vektor{1}{2}{0}\times\vektor{3}{1}{0}\right)=0$\\
+			  1c:	$\vektor{-4}{3}{0}\cdot\left(\vektor{-4}{3}{0}\times\vektor{2}{-9}{-1}\right)=0$\\
+			  Schlussfolgerung: $\vec{a}\cdot(\vec{a}\times\vec{b})=0$\bigskip
+		\item Da nach a) $$\vec{b}\cdot(\vec{a}\times\vec{b})=\vec{b}\cdot(\vec{b}\times\vec{a}),$$ geschieht hier dasselbe wie bei b).\\		
+	\end{enumerate}
+	UND: Da $\vec{a}\cdot(\vec{a}\times\vec{b})=0$, ist $$\vec{a}\perp\vec{a}\times\vec{b}$$
+	
+\end{enumerate}
