@@ -1,0 +1,387 @@
+\documentclass[12pt,a4paper,twoside,fleqn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[left=25mm, top=20mm, bottom=20mm, right=20mm]{geometry}
+\usepackage{graphicx,color,marvosym,upgreek,url}
+\usepackage{amssymb,multicol,overpic}
+\usepackage{amsmath}
+%\usepackage{ifthen}
+
+%% http://www.ctan.org/pkg/exsheets
+\usepackage[totoc=false]{exsheets}
+
+
+\begin{document}
+
+\renewcommand{\thepage}{Seite~\arabic{page}}
+% \renewcommand{\thesection}{1.}
+% \renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.2}
+
+\renewcommand{\labelenumi}{{\bf\arabic{enumi}.)}}
+\renewcommand{\labelenumii}{{\bf\alph{enumii})}}
+\renewcommand{\labelenumiii}{{\bf\roman{enumiii})}}
+
+\newcounter{column}
+\renewcommand{\thecolumn}{{\bf\alph{column}\ }}
+\newcommand{\labelcolumn}{{\bf\alph{column})\ \ \ }}
+\setlength{\itemsep}{0pt}
+\setlength{\mathindent}{0cm}
+\newcounter{last}
+
+\SetupExSheets{question/headings=runin,question/type=exam}
+
+
+\pagestyle{myheadings}
+\markboth{\hfill Kurs: LGS und Gauß-Verfahren}%
+{Kurs: LGS und Gauß-Verfahren\hfill}
+\title{Das Gauß-Verfahren zum Lösen von Linearen Gleichungssystemen\\\large{Ein Kurs
+  zum selbständigen Lernen.}}
+\author{Alexander Ruhri\\
+  \small\texttt{a.ruhri@widarschule.de}\\
+  \small Aktuelle Version unter \texttt{http://www.ruhri.net/}}
+\date{\small Version 0.1, Februar 2017}
+% Todo: Lösungen
+\maketitle
+\section*{Vorbemerkungen}
+Bitte beachten Sie beim Bearbeiten dieser Blätter, dass an geeigneten
+Stellen Zusammenfassungen mit der ganzen Klasse durchgeführt
+werden. Bitte machen Sie Ihren Lehrer darauf aufmerksam, wenn Sie das
+Bedürfnis nach einer solchen Besprechung haben. 
+\subsection*{Voraussetzungen}
+Um mit den Inhalten des Kurses zurechtzukommen ist es notwendig,
+dass Sie wissen, wie man lineare Gleichungssysteme mit 2 Unbekannten
+mittels Additionsverfahren löst. Außerdem sollten Sie
+Äquivalenzumformungen von Gleichungen beherrschen.
+\tableofcontents
+\newpage
+\section{Lineare Gleichungssysteme (LGS)}
+Bisher haben Sie gelernt, LGS mit zwei Unbekannten zu lösen. Sie haben
+dazu möglicherweise verschiedene Verfahren kennen gelernt:
+\begin{itemize}
+\item Einsetzverfahren
+\item Gleichsetzungsverfahren
+\item Additionsverfahren
+\item Determinantenverfahren
+\end{itemize}
+
+Das Gauß-Verfahren ist eine Anwendung des \emph{Additionsverfahrens}, mit der
+man auf sichere Weise LGS mit drei und mehr Variablen lösen kann.
+\subsection{Eine kurze Wiederholung}
+
+\begin{question}%
+  Lösen Sie die folgenden LGS mit dem Additionsverfahren.
+  \begin{multicols}{3}
+    \begin{enumerate}
+    \item $
+      \left|\begin{array}{rcl}
+        4x_1+3x_2&=&-5 \\
+        2x_1+x_2&=&1
+      \end{array}\right|$
+    \item 
+      $\left|\begin{array}{rcl}
+         x_1+5x_2&=&7 \\
+         -x_1+x_2&=&-1
+       \end{array}\right|$
+     \item 
+       $\left|\begin{array}{rcl}
+          2x_1+x_2&=&2 \\
+          3x_1-x_2&=&23
+        \end{array}\right|$
+      \item 
+        $\left|\begin{array}{rcl}
+          -4x_1+2x_2&=& 2\\
+          3x_1+x_2&=&-1
+        \end{array}\right|$
+       \item 
+        $\left|\begin{array}{rcl}
+          -x_1+x_2&=& 2\\
+           x_2&=&-2
+        \end{array}\right|$
+       \item 
+        $\left|\begin{array}{rrcl}
+          2x_1&+7x_2&=& 9\\
+           x_1&&=&4
+        \end{array}\right|$
+      \end{enumerate}
+    \end{multicols}
+  \end{question}
+  \begin{solution}
+    \begin{multicols}{6}
+    \begin{enumerate}
+    \item $(4;-7)$
+    \item $(2;1)$
+    \item $(5;-8)$
+    \item $(-\frac 2 5 ; \frac 1 5 )$
+    \item $(-4;-2)$
+    \item $(4;\frac 1 7)$
+    \end{enumerate}
+  \end{multicols}
+\end{solution}
+              
+Welche dieser Aufgaben konnten Sie besonders leicht lösen? Woran lag
+das? Notieren Sie Ihre Überlegungen!
+\subsection{Wir machen es ein wenig komplexer}
+\begin{question}%
+  Lösen Sie die folgenden LGS mit dem Additionsverfahren. Beschreiben
+  Sie, welche Eigenschaft der LGS Ihnen das Lösen erleichtert.
+  \begin{multicols}{2}
+    \begin{enumerate}
+    \item  
+      $\left|\begin{array}{rcl}
+         -x_1+2x_2-x_3&=& 0\\
+         3x_2+x_3&=& 9\\
+         5x_3&=&15
+       \end{array}\right|$
+      \item   
+        $\left|\begin{array}{rrrcl}
+           7x_1&+20x_2&-2x_3&=& -16\\
+           -2x_1&& +2x_3&=& 6\\
+           3x_1&&&=&-6
+         \end{array}\right|$ 
+     \item 
+        $\left|\begin{array}{rllcl}
+           -2x_1&+2x_2&&=& -18\\
+           5x_1&+4x_2& +3x_3&=&9 \\
+           2x_1&-x_2&&=&13
+         \end{array}\right|$ 
+     \item 
+       $\left|\begin{array}{rlllcl}
+                &3x_2&&&=&6    \\
+                x_1&+4x_2&&+3x_4&=&3 \\
+                -3x_1&+2x_2&+x_3&-x_4&=& 2\\
+                &-x_2&&+x_4&=&-4
+              \end{array}\right|$ 
+    \end{enumerate}
+  \end{multicols}
+\end{question}
+\begin{solution}
+  \begin{multicols}{4}
+    \begin{enumerate}
+    \item $(1;2;3)$
+    \item $(-2;0;1)$
+    \item $(4;-5;3)$
+    \item $(1;2;-1;-2)$
+    \end{enumerate}
+  \end{multicols}
+\end{solution}
+
+\begin{question}
+  Wir lassen erst die erleichternde Eigenschaft weg und dann bricht in
+  der zweiten Aufgabe auch noch Chaos aus. Versuchen Sie nun, die LGS
+  zu lösen. Beschreiben Sie die nötigen Schritte. Sollten Sie hier
+  scheitern, gehen Sie zum nächsten Abschnitt und versuchen Sie es mit
+  dem neu erworbenen Wissen später nochmal.
+  \begin{multicols}{2}
+    \begin{enumerate}
+    \item   
+      $\left|
+        \begin{array}{rllcl}
+          x_1&+2x_2&-2x_3&=& 5\\
+          -x_1&-2x_2&+4x_3&=& 1\\
+          -x_1&+3x_2&-5x_3&=&-11
+        \end{array}\right|$
+    \item 
+      $\left|
+        \begin{array}{rlcll}
+          -2x_3&+2x_2&=& 1 &-x_1\\
+          2x_1&-3x_2&=& 2 &-3x_3\\
+          3x_2&+3x_3&=&x_1&+5
+        \end{array}\right|$
+    \end{enumerate}
+  \end{multicols}
+\end{question}
+\begin{solution}
+  \begin{multicols}{4}
+    \begin{enumerate}
+    \item $(5;3;3)$
+    \item $(1;1;1)$
+    \end{enumerate}
+  \end{multicols}
+\end{solution}
+
+
+% \section{Das Gauß-Verfahren}
+% Wie Sie wahrscheinlich oben erkannt haben, lassen sich
+% Gleichungssysteme dann besonders leicht lösen, wenn es immer eine
+% Gleichung mit einer Unbekannten weniger gibt. Wenn man die Gleichungen
+% dann umsortiert, ergibt sich die {\em Stufenform des
+%   Gleichungssystems}:
+
+% $$\left|\begin{array}{rcl}
+%          -x_1+2x_2-x_3&=& 0\\
+%          3x_2+x_3&=& 9\\
+%          5x_3&=&15
+%        \end{array}\right| $$
+
+% Man sieht leicht, dass sich aus der letzten Gleichung $x_3=3$
+% ergibt. Das kann dann in die zweite Gleichung eingesetzt
+% werden. Daraus ergibt sich dann $x_2=2$. Jetzt können beide gewonnenen
+% Lösungen in die erste Gleichung eingesetzt werden und man erhält
+% $x_1=1$.
+
+% Damit man die Übersicht behält, ist es zwingend notwendig, dass die
+% Variablen aller Gleichungen auf der linken Seite stehen und gleiche
+% Variablen immer direkt vertikal geordnet sind. Konstante Terme
+% (Zahlen) stehen auf der rechten Seite.
+
+% Carl Friedrich Gauß (1777 -- 1855) hat ein Verfahren beschrieben, mit
+% dem man ein beliebiges LGS in die Stufenform bringen kann. Dabei sind
+% folgende Umformungen erlaubt:
+% \begin{itemize}
+% \item das Vertauschen zweier Gleichungen,
+% \item das Multiplizieren einer Gleichung mit einer Zahl ungleich null
+%   und
+% \item die Addition einer Gleichung zu einer anderen.
+% \end{itemize}
+
+
+\subsection{Aufgaben}
+\begin{question}%
+ Bringen Sie die LGS in Stufenform und bestimmen Sie dann die
+ Lösung.
+  \begin{multicols}{2}
+    \begin{enumerate}
+     \item 
+      $\left|
+        \begin{array}{rlcl}
+          x_1&+x_2&=& 5\\
+          -4x_1&+3x_2&=&-6
+        \end{array}\right|$ 
+       \item 
+      $\left|
+        \begin{array}{rllcl}
+          x_1&+x_2&-2x_3&=& -5\\
+          -2x_1&-2x_2&+x_3&=& 1\\
+          -3x_1&-4x_2&-x_3&=&-2
+        \end{array}\right|$ 
+    \item 
+      $\left|
+        \begin{array}{rllcl}
+          x_1&+4x_2&-12x_3&=& -15\\
+          -7x_1&+2x_2&+9x_3&=& 0\\
+          -3x_1&-14x_2&-2x_3&=&9
+        \end{array}\right|$ 
+     \item 
+      $\left|
+        \begin{array}{rllcl}
+          x_1&-3x_2&-2x_3&=& 25\\
+          -3x_1&+7x_2&&=& 0\\
+          5x_1&+11x_2&-2x_3&=&1
+        \end{array}\right|$ 
+     \item 
+      $\left|
+        \begin{array}{rllcl}
+          4x_1&-3x_2&-2x_3&=& 1\\
+          -8x_1&+3x_2&+4x_3&=&-1 \\
+          x_1&+6x_2&+4x_3&=&\frac 1 4
+        \end{array}\right|$ 
+      \item 
+      $\left|
+        \begin{array}{rlllcl}
+          x_1&-2x_2&+2x_3&+x_4&=& -1\\
+          3x_1&-5x_2&+4x_3&+2x_4&=&-3 \\
+          x_1&+\frac 1 2 x_2&+\frac 1 3 x_3&-\frac 1 4 x_4&=& 4\\
+          x_1&-x_2&+x_3&+x_4&=&-2
+        \end{array}\right|$ 
+    \end{enumerate}
+  \end{multicols}
+\end{question}
+\begin{solution}
+  \begin{multicols}{4}
+    \begin{enumerate}
+    \item $(3;2)$
+    \item $(5;-4;3)$
+    \item $(1;-1;1)$
+    \item $(7;-3;\frac 1 2)$
+    \item $(\frac 1 4; \frac 1 3;-\frac 1 2)$
+    \item $(1;2;3;-4)$
+    \end{enumerate}
+  \end{multicols}
+\end{solution}
+\begin{question}%
+  Die Quersumme einer 4-stelligen Zahl ist 17. Die Summe aus Zehner-
+  und Einerziffer ist gleich der Tausenderziffer. Die Summe aus
+  Hunderter- und Zehnerziffer ist gleich der Einerziffer. Die Summe
+  der ersten beiden Zifern ist um 3 größer als die Summe der beiden
+  hinteren Ziffern.  Bestimmen Sie die gesuchte Zahl.
+\end{question}
+\begin{solution}
+  Wir suchen die 4 Ziffern einer Zahl: $x_1,x_2, x_3, x_4$. Aus den
+  Bedingungen ergibt sich folgendes LGS:
+
+    $\left|
+        \begin{array}{rlllcl}
+          x_1&+x_2&+x_3&+x_4&=& 17\\
+          x_3&+x_4&&&=&x_1 \\
+          x_2&+x_3&&&=&x_4\\
+          x_1&+x_2&&&=&x_3+x_4+3
+        \end{array}\right|$ \\
+     Die gesuchte Zahl ist 7325.
+\end{solution}
+\begin{question}
+  Ein Becken mit einem Fassungsvermögen von 1000\,l wird durch drei
+  Pumpen befüllt. Pumpe 1 und Pumpe 2 benötigen für die Füllung
+  zusammen 45 Minuten. Die dritte Pumpe füllt das Becken zusammen mit
+  der ersten Pumpe in einer Stunde und 30 Minuten. Die dritte Pumpe
+  arbeitet nur halb so schnell wie die zweite. 
+  Wie lange benötigt jede
+  Pumpe alleine für die Füllung des Beckens? 
+  Wie viel Zeit vergeht,
+  wenn man das Becken gleichzeitig mit allen drei Pumpen
+  befüllt?\footnote{\url{http://www.schule-bw.de/unterricht/faecher/mathematik/3material/sek1/algebra/glsys/}}
+\end{question}
+\begin{solution}
+  Pumpe 1 ist kaputt, Pumpe 2 braucht 45 Minuten um das Becken zu
+  füllen, Pumpe 3 braucht 90 Minuten. Alle drei Pumpen zusammen
+  brauchen eine halbe Stunde.
+\end{solution}
+\begin{question}
+  In einem Stall sind Hühner, Schafe, Ziegen und Spinnen.
+  Die Anzahl der Tiere beträgt 336. Die Anzahl der Beine ist 2502. Es
+  gibt doppelt so viele Schafe wie Ziegen. Es gibt 60 Hufe, die den
+  Boden berühren. 
+  Bestimmen Sie die jeweilige Anzahl der Tiere.
+\end{question}
+\begin{solution}
+  Im Stall sind 21 Hühner, 10 Schafe, 5 Ziegen und 300 Spinnen (mit je 8 Beinen).
+\end{solution}
+\begin{question}
+  Für die Zubereitung eines Multivitaminsaftgetränks werden
+  Ananassaft, Pampelmusensaft und Mangosaft benötigt. Der Fruchtanteil
+  des Ananassafts A betrage 40\,\%. Der Pampelmusensaft P enthält
+  30\,\% Fruchtanteil, der Mangosaft M 60\,\% Fruchtanteil. Durch die
+  Mischung soll 1 Liter Fruchtsaft entstehen, dessen Fruchtanteil
+  50\,\% beträgt, wobei der Anteil an Pampelmusen- und Ananassaft
+  gleich hoch sein sollen.
+  Bestimmen Sie die Anteile von A, P und M bei einer
+  möglichen Mischung.\footnote{ \url{http://lernportal.ziemke-koeln.de/mathematik/gk11/uebungen/algebra/aufg_lgs5.htm}}
+\end{question}
+\begin{solution}
+  Die Mischung besteht aus 0,6\,l Mango, 0,2\,l Pampelmuse und 0,2\,l Ananas.
+\end{solution}
+\begin{question}
+  Ein Weinhändler bietet vier Sortimente mit je zehn Flaschen und drei Sorten an:
+Sortiment Luxus besteht aus zwei Flaschen der Sorte A, drei Flaschen
+der Sorte B und fünf Flaschen der Sorte C. Es kostet 74,50\,\EUR . 
+Sortiment Genießer besteht aus drei Flaschen der Sorte A, vier
+Flaschen von B und drei Flaschen von C. Es kostet 66,00\,\EUR .
+Sortiment Standard besteht aus drei Flaschen der Sorte A, fünf der
+Sorte B und zwei der Sorte C und kostet 62,50\,\EUR .
+Sortiment Einsteiger besteht aus fünf Flaschen der Sorte A, drei
+Flaschen von B und zwei Flaschen von C. Es kostet 59,50\,\EUR .
+Ermitteln Sie die Preise der einzelnen Flasche jeder Sorte.\footnote{\url{http://lernportal.ziemke-koeln.de/mathematik/gk11/uebungen/algebra/aufg_lgs5.htm}}
+
+\end{question}
+ \begin{solution}
+  Die Weinflaschen der Sorte A kosten 4,50\,\EUR , Flaschen der Sorte
+  B kosten 6,00\,\EUR , und für Sorte C sind stolze 9,50\,\EUR\ zu zahlen. 
+ \end{solution}
+% \section{Matrix-Vektor-Schreibweise}
+\newpage
+\section{Lösungen der Aufgaben}
+{\scriptsize\printsolutions}
+
+\end{document}
+
+
