@@ -247,7 +247,7 @@ Dort setzten wir die Bezeichnungen in Vektoren-Schreibweise hinein:
 		$$ |\vec{BC}|^2=|\vec{CA}^2|+|\vec{AB}|^2-2|\vec{CA}||\vec{AB}|\cdot cos(\alpha) $$
 Wir tauschen $\vec{BC}$ mit $\vec{CA-AB}$ um nur noch zwei statt drei unterschiedlicher Vektoren zu haben:	
 		$$|\vec{CA}-\vec{AB}|^2=|\vec{CA}|^2+|\vec{AB}|^2-2|\vec{CA}||\vec{AB}|\cdot cos(\alpha) \qquad |-|\vec{CA}|^2-|\vec{AB}|^2 $$
-Dann fangen wir die Formel nach $\alpha$ umzustellen:	
+Dann fangen wir an die Formel nach $\alpha$ umzustellen:	
 		$$|\vec{CA}-\vec{AB}|^2-|\vec{CA}|^2-|\vec{AB}|^2=-2|\vec{CA}||\vec{AB}|\cdot \cos(\alpha) $$
 Wir schreiben die Vektoren ganz auf,	
 		$$\left|\vektor{c_1-a_1}{c_2-a_2}{c_3-a_3}\right|^2-\left|\vektor{c_1}{c_2}{c_3}\right|^2-\left|\vektor{a_1}{a_2}{a_3}\right|^2=-2|\vec{CA}||\vec{AB}| \cdot \cos(\alpha) $$
@@ -294,9 +294,18 @@ Als letztes Kürzen wir mit $-2$ und können aus dem Rest oberhalb des Bruches w
 			$  a=|\vec{BC}| = \left|\Vektor{-1}{4}\right| = \sqrt{(-1)^2+4^2} = \sqrt{1+16} = \sqrt{17}\\ b=|\vec{CA}|=\left|\Vektor{-2}{-2}\right| = \sqrt{(-2)^2+(-2)^2} = \sqrt{4+4}=\sqrt{8}\\ 
 			c=|\vec{AB}| = \left|\Vektor{3}{-2}\right| = \sqrt{3^2+(-2)^2} = \sqrt{9+4} =\sqrt{13}$\\
 			\bigskip\newline
-			$ \alpha = cos^{-1} \left(\frac{\vec{AB} \cdot \vec{CA}}{|\vec{AB}|\cdot |CA|}\right) = cos^{-1} \left(\frac{-6+4}{\sqrt{13} \cdot \sqrt{8}}\right) = 78\mathrm{,} 69^\circ $\\
-			$ \beta = cos^{-1} \left(\frac{\vec{AB}\cdot\vec{BC}}{|\vec{AB}|\cdot|BC|}\right)=cos^{-1} \left(\frac{-3-8}{\sqrt{13}\cdot\sqrt{17}}\right) =42,27^\circ$\\
-			$ \gamma = cos^{-1} \left(\frac{\vec{BC}\cdot\vec{CA}}{|\vec{BC}|\cdot|CA|}\right)=cos^{-1} \left(\frac{2-8}{\sqrt{17}\cdot\sqrt{8}}\right) =102,96^\circ $
+			$ \alpha = cos^{-1} \left(\frac{\vec{AB} \cdot
+                            \vec{AC}}{|\vec{AB}|\cdot |AC|}\right)
+                        = cos^{-1} \left(\frac{6-4}{\sqrt{13} \cdot \sqrt{8}}\right)
+                        = 78,69^\circ $\\
+			$ \beta = cos^{-1}
+                        \left(\frac{\vec{BA}\cdot\vec{BC}}{|\vec{BA}|\cdot|BC|}\right)
+                        =cos^{-1}
+                        \left(\frac{3+8}{\sqrt{13}\cdot\sqrt{17}}\right)
+                        =42,27^\circ$\\
+			$ \gamma = cos^{-1}
+                        \left(\frac{\vec{CB}\cdot\vec{CA}}{|\vec{CB}|\cdot|CA|}\right)
+                        =cos^{-1} \left(\frac{8-2}{\sqrt{17}\cdot\sqrt{8}}\right) =59,04^\circ $
 			
 			\item 
 			$c= |\vec{AB}|=\left|\Vektor{ 8}{-3} \right|=\sqrt{73}\\
@@ -333,7 +342,40 @@ Als letztes Kürzen wir mit $-2$ und können aus dem Rest oberhalb des Bruches w
 			\dfrac{\sqrt{\cos(30)^2 \cdot 3}}{\sqrt{1-cos(30)^2}}=b\\			
 			\uu{\pm3=b}
 			\end{align*}
-			\item	geht nicht%? %ich muss gestehen es ist schon lange her und das sollten Sie nochmal bestätigen.
+                      \item
+
+                        Wir setzen eine Gleichung über die Winkel-Formel an:
+                        $$\cos(60)=
+                        \frac{\vektor{0}{0,5}{0,5} \cdot \vektor{1}{0}{c}}
+                        {\left|\vektor{0}{0,5}{0,5}\right| \cdot
+                          \left|\vektor{1}{0}{c}\right|}$$
+
+                        Wir setzen $\cos(60)=0,5$ ein, berechnen das
+                        Skalarprodukt und die Längen und setzen alles ein.
+                        Wenn die Unbekannte im Nenner steht,
+                        müssen wir die Gleichung mit dem Nenner
+                        multiplizieren:
+                        \begin{align*}
+                          0,5 &=\frac {0,5\cdot c}
+                                {\sqrt{0,5}\cdot\sqrt{1+c^2}}&|\quad
+                                                                 \cdot
+                                                                 \sqrt{0,5}\cdot\sqrt{1+c^2}&\\
+                          0,5\cdot \sqrt{0,5}\cdot\sqrt{1+c^2}
+                              &=0,5\cdot c &|\quad \cdot 2&\\
+                          \sqrt{0,5}\cdot\sqrt{1+c^2}&=c &\quad \textrm{alles
+                                                           quadrieren, damit
+                                                           die Wurzel
+                                                           wegkommt}&\\
+                          0,5\cdot (1+c^2) &= c^2& &\\
+                          0,5 +0,5c^2 &= c^2 &\quad | -0,5c^2 &\\
+                          0,5 &= 0,5c^2 & \quad | \cdot 2 &\\
+                          1&= c^2 &\quad |\sqrt{ } &\\
+                          c&=1
+                        \end{align*}
+                        Da wir einmal alles quadriert haben, ist die
+                        negative Lösung ausgeschlossen.
+
+                        
 		\end{enumerate}			
 		
 		\item
